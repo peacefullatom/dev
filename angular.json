@@ -32,7 +32,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "dev",
+              "baseHref": "/dev/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
