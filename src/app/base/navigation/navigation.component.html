@@ -1,0 +1,22 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <a href="{{ defaultRoute.path }}" class="navbar-brand">
+    {{ defaultRoute.label }}
+  </a>
+  <button class="navbar-toggler" type="button" (click)="click()" #toggler>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" #navbar>
+    <ul class="navbar-nav mr-auto">
+      <li *ngFor="let route of routes" class="nav-item">
+        <a
+          (click)="click()"
+          [routerLink]="route.path"
+          [routerLinkActive]="active"
+          class="nav-link"
+        >
+          {{ route.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
