@@ -1,0 +1,12 @@
+$accentColor: rgba(109, 157, 215, 0.8);
+
+%document {
+  width: 100%;
+  height: 100%;
+}
+
+%host {
+  @extend %document;
+  display: flex;
+  flex-direction: column;
+}
