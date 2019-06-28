@@ -1,7 +1,8 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { defaultRoute } from 'src/app/const';
+import { defaultRoute, routeActive } from 'src/app/const';
 import { IRoute } from 'src/app/types';
 
+/** header navigation component */
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -14,7 +15,7 @@ export class NavigationComponent implements OnInit {
   >;
   @ViewChild('navbar', { static: true }) navbar: ElementRef<HTMLDivElement>;
 
-  active = 'active';
+  active = routeActive;
   defaultRoute = defaultRoute;
 
   constructor() {}
