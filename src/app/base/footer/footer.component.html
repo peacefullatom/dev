@@ -1,0 +1,22 @@
+<div
+  class="footer mt-auto py-3 px-3 d-flex justify-content-between flex-shrink-0"
+>
+  <div>
+    <a
+      *ngFor="let route of routes"
+      href="{{ route.path }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><app-icon-fab
+        [icon]="route.icon"
+        [library]="route.library"
+      ></app-icon-fab
+    ></a>
+  </div>
+  <div>
+    &copy; {{ year }}
+    <a [routerLink]="contact.path" [routerLinkActive]="active">{{
+      contact.label
+    }}</a>
+  </div>
+</div>
