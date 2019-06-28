@@ -8,4 +8,5 @@ $accentColor: rgba(109, 157, 215, 0.8);
 %host {
   @extend %document;
   display: flex;
+  flex-direction: column;
 }
