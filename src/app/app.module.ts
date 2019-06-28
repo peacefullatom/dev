@@ -4,13 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyModule } from './base/body/body.module';
 import { FooterModule } from './base/footer/footer.module';
-import { NavigationModule } from './base/navigation/navigation.module';
+import { HeaderModule } from './base/header/header.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    NavigationModule,
+    HeaderModule,
     BodyModule,
     FooterModule,
     AppRoutingModule

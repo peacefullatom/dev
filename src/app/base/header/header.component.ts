@@ -4,11 +4,11 @@ import { IRoute } from 'src/app/types';
 
 /** header navigation component */
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class HeaderComponent implements OnInit {
   @Input() routes: IRoute[] = [];
   @ViewChild('toggler', { static: true }) toggler: ElementRef<
     HTMLButtonElement
