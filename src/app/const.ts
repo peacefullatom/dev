@@ -4,7 +4,7 @@ import { IRoute } from './types';
 /** the default route active css class */
 export const routeActive = 'active';
 /** the default path */
-export const defaultPath = '/';
+export const defaultPath = '';
 /** the contact path */
 export const contactPath = 'contact';
 /** path to the intro section */
@@ -20,14 +20,15 @@ export const defaultRoute: IRoute = {
 /** path to the contact section */
 export const contactRoute: IRoute = {
   path: contactPath,
-  label: 'Yuriy Markov'
+  label: 'Yuriy Markov',
+  skip: true
 };
 
 /** app routes definition */
 export const appRoutes: IRoute[] = [
   defaultRoute,
   contactRoute,
-  { path: introPath, component: IntroComponent, label: 'Intro' },
+  { path: introPath, component: IntroComponent, label: 'Intro', skip: true },
   { path: '', redirectTo: introPath, pathMatch: 'full', skip: true },
   { path: '**', redirectTo: '', skip: true }
 ];
