@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { contactRoute, routeActive } from 'src/app/const';
-import { footerRoutes } from './const';
 
 /** footer component */
 @Component({
@@ -10,7 +9,6 @@ import { footerRoutes } from './const';
 })
 export class FooterComponent implements OnInit {
   year = new Date().getFullYear();
-  routes = footerRoutes;
   contact = contactRoute;
   active = routeActive;
 
