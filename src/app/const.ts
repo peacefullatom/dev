@@ -13,14 +13,18 @@ export const introPath = 'intro';
 /** the default route definition */
 export const defaultRoute: IRoute = {
   path: defaultPath,
-  skip: true,
-  label: '[DEV]'
+  redirectTo: introPath,
+  pathMatch: 'full',
+  label: '[DEV]',
+  skip: true
 };
 
 /** path to the contact section */
 export const contactRoute: IRoute = {
   path: contactPath,
   label: 'Yuriy Markov',
+  loadChildren: () =>
+    import('src/app/page/contact/contact.module').then(m => m.ContactModule),
   skip: true
 };
 
