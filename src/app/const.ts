@@ -3,12 +3,16 @@ import { IRoute } from './types';
 
 /** the default route active css class */
 export const routeActive = 'active';
+/** the empty path */
+export const emptyPath = '';
 /** the default path */
-export const defaultPath = '';
+export const defaultPath = emptyPath;
 /** the contact path */
 export const contactPath = 'contact';
 /** path to the intro section */
 export const introPath = 'intro';
+/** path to the prerequisites section */
+export const prerequisitesPath = 'prerequisites';
 
 /** the default route definition */
 export const defaultRoute: IRoute = {
@@ -33,6 +37,14 @@ export const appRoutes: IRoute[] = [
   defaultRoute,
   contactRoute,
   { path: introPath, component: IntroComponent, label: 'Intro', skip: true },
-  { path: '', redirectTo: introPath, pathMatch: 'full', skip: true },
+  {
+    path: prerequisitesPath,
+    label: 'Prerequisites',
+    loadChildren: () =>
+      import('./page/prerequisites/prerequisites.module').then(
+        m => m.PrerequisitesModule
+      )
+  },
+  { path: emptyPath, redirectTo: introPath, pathMatch: 'full', skip: true },
   { path: '**', redirectTo: '', skip: true }
 ];
