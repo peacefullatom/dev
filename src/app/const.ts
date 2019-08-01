@@ -15,8 +15,10 @@ export const contactPath = 'contact';
 export const introPath = 'intro';
 /** path to the prerequisites section */
 export const prerequisitesPath = 'prerequisites';
-/** path to the list of vscode extensions */
+/** path to the list of vscode extensions section */
 export const vsCodeExtensionsPath = 'vs-code-extensions';
+/** path to the git cli section */
+export const gitCliPath = 'git-cli';
 
 /** the default route definition */
 export const defaultRoute: IRoute = {
@@ -56,6 +58,12 @@ export const appRoutes: IRoute[] = [
       import('./page/vs-code-extensions/vs-code-extensions.module').then(
         m => m.VsCodeExtensionsModule
       )
+  },
+  {
+    path: gitCliPath,
+    label: 'Git CLI',
+    loadChildren: () =>
+      import('./page/git-cli/git-cli.module').then(m => m.GitCliModule)
   },
   { path: emptyPath, redirectTo: introPath, pathMatch: 'full', skip: true },
   { path: '**', redirectTo: '', skip: true }
