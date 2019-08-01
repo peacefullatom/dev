@@ -7,12 +7,16 @@ export const routeActive = 'active';
 export const emptyPath = '';
 /** the default path */
 export const defaultPath = emptyPath;
+/** the level up path */
+export const parentPath = '..';
 /** the contact path */
 export const contactPath = 'contact';
 /** path to the intro section */
 export const introPath = 'intro';
 /** path to the prerequisites section */
 export const prerequisitesPath = 'prerequisites';
+/** path to the list of vscode extensions */
+export const vsCodeExtensionsPath = 'vs-code-extensions';
 
 /** the default route definition */
 export const defaultRoute: IRoute = {
@@ -43,6 +47,14 @@ export const appRoutes: IRoute[] = [
     loadChildren: () =>
       import('./page/prerequisites/prerequisites.module').then(
         m => m.PrerequisitesModule
+      )
+  },
+  {
+    path: vsCodeExtensionsPath,
+    label: 'VSCode extensions',
+    loadChildren: () =>
+      import('./page/vs-code-extensions/vs-code-extensions.module').then(
+        m => m.VsCodeExtensionsModule
       )
   },
   { path: emptyPath, redirectTo: introPath, pathMatch: 'full', skip: true },
