@@ -1,0 +1,5 @@
+<pre
+  *ngIf="!value"
+  class="{{ className }}"
+><code><ng-content></ng-content></code></pre>
+<pre *ngIf="value" class="{{ className }}"><code>{{value}}</code></pre>
