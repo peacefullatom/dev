@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { gitCliPath, parentPath, vsCodeExtensionsPath } from 'src/app/const';
+import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-prerequisites',
@@ -24,6 +25,7 @@ export class PrerequisitesComponent implements OnInit {
   angularFontAwesomeUrl = 'https://github.com/FortAwesome/angular-fontawesome';
   vsCodeExtensionsPath = [parentPath, vsCodeExtensionsPath];
   gitCliPath = [parentPath, gitCliPath];
+  faExternalLinkSquareAlt = faExternalLinkSquareAlt;
 
   constructor() {}
 
