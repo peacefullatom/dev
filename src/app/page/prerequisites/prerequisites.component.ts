@@ -18,6 +18,10 @@ export class PrerequisitesComponent implements OnInit {
   vimUrl = 'http://www.vim.org/';
   gitUrl = 'https://git-scm.com/';
   gitGuiUrl = 'https://git-scm.com/downloads/guis';
+  bootstrapUrl = 'https://getbootstrap.com/';
+  fontAwesomeUrl = 'https://fontawesome.com/';
+  fontAwesomeIconsUrl = 'https://fontawesome.com/icons';
+  angularFontAwesomeUrl = 'https://github.com/FortAwesome/angular-fontawesome';
   vsCodeExtensionsPath = [parentPath, vsCodeExtensionsPath];
   gitCliPath = [parentPath, gitCliPath];
 
