@@ -1,12 +1,14 @@
-# sprint 2019.08 / 1
+# scrum board
 
-| plan                           | in work    | done               |
-| ------------------------------ | ---------- | ------------------ |
-| note component                 | fix layout | code component     |
-| make vscode extensions section |            | make prerequisites |
-| make git cli section           |            |                    |
+## sprint 2019.08 / 1
 
-# sprint 2019.07
+| plan                 | in work                        | done               |
+| -------------------- | ------------------------------ | ------------------ |
+| note component       | make vscode extensions section | code component     |
+| make git cli section |                                | make prerequisites |
+|                      |                                | fix layout         |
+
+## sprint 2019.07
 
 | plan | in work            | done                    |
 | ---- | ------------------ | ----------------------- |
