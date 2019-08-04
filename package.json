@@ -5,7 +5,7 @@
     "email": "peacefullatom@gmail.com"
   },
   "description": "playground",
-  "homepage": "https://peacefullatom.github.io",
+  "homepage": "https://peacefullatom.github.io/dev",
   "repository": {
     "type": "github",
     "url": "https://github.com/peacefullatom/peacefullatom.github.io.git"
@@ -14,7 +14,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod && node copy.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
