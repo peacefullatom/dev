@@ -2,11 +2,12 @@
 
 ## sprint 2019.08 / 1
 
-| plan                 | in work                        | done               |
-| -------------------- | ------------------------------ | ------------------ |
-| note component       | make vscode extensions section | code component     |
-| make git cli section |                                | make prerequisites |
-|                      |                                | fix layout         |
+| plan                 | in work                        | done                 |
+| -------------------- | ------------------------------ | -------------------- |
+| note component       | make vscode extensions section | code component       |
+| make git cli section |                                | make prerequisites   |
+|                      |                                | fix layout           |
+|                      |                                | blockquote component |
 
 ## sprint 2019.07
 
