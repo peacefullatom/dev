@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import { gitCliPath, parentPath, vsCodeExtensionsPath } from 'src/app/const';
+import { codeUrl } from '../const';
 
 @Component({
   selector: 'app-prerequisites',
@@ -16,7 +17,7 @@ export class PrerequisitesComponent implements OnInit {
   eclipseUrl = 'http://eclipse.org/';
   netBeansUrl = 'https://netbeans.org/';
   webStormUrl = 'https://www.jetbrains.com/webstorm/';
-  codeUrl = 'https://code.visualstudio.com/';
+  codeUrl = codeUrl;
   atomUrl = 'https://atom.io/';
   sublimeUrl = 'https://www.sublimetext.com/';
   vimUrl = 'http://www.vim.org/';
