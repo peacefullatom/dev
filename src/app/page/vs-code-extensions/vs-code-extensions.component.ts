@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { bsTextCenter } from 'src/app/core/const/bootstrap';
 import { codeUrl } from '../const';
 
 @Component({
@@ -21,6 +22,24 @@ export class VsCodeExtensionsComponent implements OnInit {
   intelliCodeAnchor = 'IntelliCode';
   intelliCodeUrl =
     'https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode';
+  gitLensAnchor = 'GitLens';
+  gitLensUrl =
+    'https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens';
+  intelliSenseForCssAnchor = 'IntelliSenseForCss';
+  intelliSenseForCssUrl =
+    'https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion';
+  debuggerForChromeAnchor = 'DebuggerForChrome';
+  debuggerForChromeUrl =
+    'https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome';
+  bracketPairColorizerAnchor = 'BracketPairColorizer';
+  bracketPairColorizerUrl =
+    'https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer';
+  spellCheckerAnchor = 'SpellChecker';
+  spellCheckerUrl =
+    'https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker';
+  settingsSyncAnchor = 'SettingsSync';
+  settingsSyncUrl =
+    'https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync';
 
   constructor() {}
 
