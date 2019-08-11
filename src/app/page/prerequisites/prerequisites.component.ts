@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import { gitCliPath, parentPath, vsCodeExtensionsPath } from 'src/app/const';
+
 import { codeUrl } from '../const';
 
 @Component({

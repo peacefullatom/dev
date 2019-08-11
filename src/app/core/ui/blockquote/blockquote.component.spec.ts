@@ -8,9 +8,8 @@ describe('BlockquoteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlockquoteComponent ]
-    })
-    .compileComponents();
+      declarations: [BlockquoteComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

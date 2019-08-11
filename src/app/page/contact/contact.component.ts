@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { iconSize2x } from 'src/app/core/const/icon';
+
 import { contactExternalLinks, contactLinks } from './const';
 
 @Component({
