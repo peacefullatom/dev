@@ -1,1 +1,63 @@
-<p>git-cli works!</p>
+<h4>The git CLi</h4>
+<p>As a developer, I'm using different tools every day.</p>
+<p>
+  One of my favorite tools is a
+  <app-external-link [href]="gitUrl">git</app-external-link>.
+</p>
+<p>
+  There are plenty of ways of using git. As I mentioned in the
+  <a [routerLink]="prerequisitesPath" fragment="{{ gitAnchor }}"
+    >prerequisites</a
+  >
+  section, there is a set of
+  <app-external-link [href]="gitGuiUrl">GUI software</app-external-link>.
+</p>
+<p>But I prefer to use git from command-line.</p>
+<p>So, here are some of the commands I'm using daily.</p>
+<h5 id="{{ initAnchor }}">init</h5>
+<p>If you need to initialize a new repository run this command:</p>
+<app-code>git init</app-code>
+<p>That's all! Now you have the initialized repo. Make your first commit.</p>
+<h5 id="{{ pullAnchor }}">pull</h5>
+<p>
+  If you are working as a part of a team, or if you are working from different
+  workstations, you need to keep your local repo up to date.
+</p>
+<p>
+  To perform this run the following:
+</p>
+<app-code>git pull</app-code>
+<p>
+  After running this command, don't forget to check if there are any merging
+  conflicts.
+</p>
+<h5 id="{{ branchAnchor }}">branch</h5>
+<p>
+  There can be several branches in a repository.
+</p>
+<p>
+  Next command is showing a list of branches and highlights the active one:
+</p>
+<app-code>git branch</app-code>
+<p>It is a bad habit to work on the <i>master</i> or <i>develop</i> branch.</p>
+<p>
+  Most of the work is happening in child branches.
+</p>
+<p>
+  To create a new branch, run this command:
+</p>
+<app-code>git branch <i>branch_name</i></app-code>
+<p>If you want to remove local branch type this command:</p>
+<app-code>git branch <b>-d</b>&nbsp;<i>branch_name</i></app-code>
+<p>Don't forget that the branch will remain on a remote server.</p>
+<h5 id="{{ checkoutAnchor }}">checkout</h5>
+<app-code>git checkout <i>branch_name</i></app-code>
+<app-code>git merge <i>branch_name</i></app-code>
+<app-code>git add <b>--all</b></app-code>
+<app-code>git add <i>file_name</i></app-code>
+<app-code>git commit</app-code>
+<app-code>git commit <b>-m</b> "<i>your_comment_here</i>"</app-code>
+<h5 id="{{ pushAnchor }}">push</h5>
+<p></p>
+<app-code>git push</app-code>
+<app-code>git push <b>--set-upstream</b> origin <i>branch_name</i></app-code>
