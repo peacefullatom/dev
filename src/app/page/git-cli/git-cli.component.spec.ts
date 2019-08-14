@@ -8,9 +8,8 @@ describe('GitCliComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GitCliComponent ]
-    })
-    .compileComponents();
+      declarations: [GitCliComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

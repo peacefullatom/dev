@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+
 import { appRoutes } from './const';
 import { IntroModule } from './intro/intro.module';
 

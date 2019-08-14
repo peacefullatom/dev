@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { bsTextLeft } from '../../const/bootstrap';
 import { BsText } from '../../types/bootstrap';
 
