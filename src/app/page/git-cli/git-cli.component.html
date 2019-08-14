@@ -51,13 +51,68 @@
 <app-code>git branch <b>-d</b>&nbsp;<i>branch_name</i></app-code>
 <p>Don't forget that the branch will remain on a remote server.</p>
 <h5 id="{{ checkoutAnchor }}">checkout</h5>
+<p>To switch to another branch issue the next command:</p>
 <app-code>git checkout <i>branch_name</i></app-code>
-<app-code>git merge <i>branch_name</i></app-code>
+<p>
+  If you want to create a new branch and switch to it, add <b>-b</b> option:
+</p>
+<app-code>git checkout <b>-b</b>&nbsp;<i>branch_name</i></app-code>
+<h5 id="{{ addAnchor }}">add</h5>
+<p>
+  After you have finished your work, you need to stage files. To add all files
+  at once use this command:
+</p>
 <app-code>git add <b>--all</b></app-code>
-<app-code>git add <i>file_name</i></app-code>
+<p>Or you can add files using the following syntax:</p>
+<app-code>git add <i>path_spec</i></app-code>
+<p>
+  Note that path_spec can be a single file name, a path to a directory, and also
+  it supports wildcards.
+</p>
+<h5 id="{{ commitAnchor }}">commit</h5>
+<p>
+  Once you have staged files, you can commit them to the remote repository. One
+  option is to use the abilities of your IDE. But you can file the next command:
+</p>
 <app-code>git commit</app-code>
+<p>
+  As a result, the git will open editor which is set in its configuration and
+  will wait until you save the generated file. This option allows you to write
+  commit's comments longer than 70 symbols.
+</p>
+<p>
+  If you prefer one-line comment style then add your description using this
+  syntax:
+</p>
 <app-code>git commit <b>-m</b> "<i>your_comment_here</i>"</app-code>
+<h5 id="{{ mergeAnchor }}">merge</h5>
+<p>Merging branches can be done as follows:</p>
+<app-code>git merge <i>branch_name</i></app-code>
+<p>Don't forget to check for conflicts and fix them if they arise.</p>
+<p>
+  It is also a good practice to merge branches via pull requests instead of
+  doing this directly.
+</p>
 <h5 id="{{ pushAnchor }}">push</h5>
-<p></p>
+<p>Pushing your changes to a remote repository is done like this:</p>
 <app-code>git push</app-code>
+<p>
+  If your branch exists only on your local workstation, then the git will warn
+  you about this. But if you are aware of that, you can run this command:
+</p>
 <app-code>git push <b>--set-upstream</b> origin <i>branch_name</i></app-code>
+<p>
+  This command will create a new branch in a remote repository and push your
+  changes.
+</p>
+<h5 id="{{ helpAnchor }}">help</h5>
+<p>
+  If you stuck at some point, you can always read the git manual. To ask git for
+  help type:
+</p>
+<app-code>git <i>command</i>&nbsp;<b>--help</b></app-code>
+<h5 id="{{ summaryAnchor }}">summary</h5>
+<p>
+  There are a lot of abilities of git which are not covered by this article. But
+  this is the minimal set for everyday usage.
+</p>

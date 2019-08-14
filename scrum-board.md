@@ -1,5 +1,11 @@
 # scrum board
 
+## sprint 2019.08 / 2
+
+| plan           | in work              | done |
+| -------------- | -------------------- | ---- |
+| note component | make git cli section |      |
+
 ## sprint 2019.08 / 1
 
 | plan           | in work              | done                           |

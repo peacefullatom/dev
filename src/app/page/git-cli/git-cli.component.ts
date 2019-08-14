@@ -19,6 +19,11 @@ export class GitCliComponent implements OnInit {
   branchAnchor = 'branch';
   checkoutAnchor = 'checkout';
   pushAnchor = 'push';
+  addAnchor = 'add';
+  commitAnchor = 'commit';
+  mergeAnchor = 'merge';
+  helpAnchor = 'help';
+  summaryAnchor = 'summary';
 
   constructor() {}
 
