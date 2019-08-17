@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { iconSize2x } from 'src/app/core/const/icon';
+import { faIconSize2x } from 'src/app/core/const/icon';
 
 import { contactExternalLinks, contactLinks } from './const';
 
@@ -11,7 +11,7 @@ import { contactExternalLinks, contactLinks } from './const';
 export class ContactComponent implements OnInit {
   links = contactLinks;
   externalLinks = contactExternalLinks;
-  size = iconSize2x;
+  faIconSize2x = faIconSize2x;
 
   constructor() {}
 
