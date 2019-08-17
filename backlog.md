@@ -3,6 +3,7 @@
 - implement the automatic table of contents
 - add section about vs code hot keys
 - pull requests via cli
+- add meta information for search engines
 
 # old
 
