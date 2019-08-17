@@ -2,10 +2,10 @@
 
 ## sprint 2019.08 / 2
 
-| plan                                                                                              | in work        | done                 |
-| ------------------------------------------------------------------------------------------------- | -------------- | -------------------- |
-| script to copy index.html to 404.html for github pages                                            | note component | make git cli section |
-| refactor src\app\core\const\icon.ts, e.g. add prefix 'fa' to all constants, rename the file, etc. |                |                      |
+| plan                                                   | in work                                                                                           | done                 |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | -------------------- |
+| script to copy index.html to 404.html for github pages | refactor src\app\core\const\icon.ts, e.g. add prefix 'fa' to all constants, rename the file, etc. | make git cli section |
+|                                                        |                                                                                                   | note component       |
 
 ## sprint 2019.08 / 1
 
