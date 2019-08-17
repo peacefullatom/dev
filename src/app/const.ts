@@ -19,6 +19,8 @@ export const prerequisitesPath = 'prerequisites';
 export const vsCodeExtensionsPath = 'vs-code-extensions';
 /** path to the git cli section */
 export const gitCliPath = 'git-cli';
+/** path to the github pages helper script section */
+export const githubPagesHelperScriptPath = 'github-pages-helper-script';
 
 /** the default route definition */
 export const defaultRoute: IRoute = {
@@ -64,6 +66,14 @@ export const appRoutes: IRoute[] = [
     label: 'Git CLI',
     loadChildren: () =>
       import('./page/git-cli/git-cli.module').then(m => m.GitCliModule)
+  },
+  {
+    path: githubPagesHelperScriptPath,
+    label: 'Github pages helper script',
+    loadChildren: () =>
+      import(
+        './page/github-pages-helper-script/github-pages-helper-script.module'
+      ).then(m => m.GithubPagesHelperScriptModule)
   },
   { path: emptyPath, redirectTo: introPath, pathMatch: 'full', skip: true },
   { path: '**', redirectTo: '', skip: true }
