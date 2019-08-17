@@ -1,13 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
 import { NoteComponent } from './note.component';
-
-
 
 @NgModule({
   declarations: [NoteComponent],
-  imports: [
-    CommonModule
-  ]
+  exports: [NoteComponent],
+  imports: [CommonModule]
 })
-export class NoteModule { }
+export class NoteModule {}
