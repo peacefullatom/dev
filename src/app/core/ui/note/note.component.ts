@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { bsCardPrimary } from './const';
+import { bsCardSecondary } from './const';
 import { BsCard } from './types';
 
 @Component({
@@ -11,7 +11,7 @@ import { BsCard } from './types';
 export class NoteComponent implements OnInit {
   @Input() header: string;
   @Input() title: string;
-  @Input() type: BsCard = bsCardPrimary;
+  @Input() type: BsCard = bsCardSecondary;
 
   constructor() {}
 
