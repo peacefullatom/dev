@@ -1,8 +1,6 @@
 <div class="row">
   <div class="col">
-    <p>
-      My contacts:
-    </p>
+    <p>My contacts:</p>
   </div>
 </div>
 <div class="row">
@@ -12,7 +10,7 @@
         ><fa-icon
           [fixedWidth]="true"
           [icon]="link.icon"
-          [size]="size"
+          [size]="faIconSize2x"
         ></fa-icon>
         &nbsp;{{ link.label }}</a
       >
@@ -21,9 +19,7 @@
 </div>
 <div class="row">
   <div class="col">
-    <p>
-      This site is made with:
-    </p>
+    <p>This site is made with:</p>
   </div>
 </div>
 <div class="row">
@@ -33,7 +29,11 @@
       href="{{ link.href }}"
       target="_blank"
       rel="noopener noreferrer"
-      ><fa-icon [fixedWidth]="true" [icon]="link.icon" [size]="size"></fa-icon
+      ><fa-icon
+        [fixedWidth]="true"
+        [icon]="link.icon"
+        [size]="faIconSize2x"
+      ></fa-icon
     ></a>
   </div>
 </div>
