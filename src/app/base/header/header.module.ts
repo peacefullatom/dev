@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
+import { HeaderItemComponent } from './item/item.component';
 
 /** header navigation module */
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, HeaderItemComponent],
   exports: [HeaderComponent],
   imports: [CommonModule, RouterModule]
 })
