@@ -21,6 +21,8 @@ export const vsCodeExtensionsPath = 'vs-code-extensions';
 export const gitCliPath = 'git-cli';
 /** path to the github pages helper script section */
 export const githubPagesHelperScriptPath = 'github-pages-helper-script';
+/** path to the components section */
+export const componentsPath = 'components';
 
 /** the default route definition */
 export const defaultRoute: IRoute = {
@@ -40,11 +42,19 @@ export const contactRoute: IRoute = {
   skip: true
 };
 
+/** path to the intro sections */
+export const introRoute: IRoute = {
+  path: introPath,
+  component: IntroComponent,
+  label: 'Intro',
+  skip: true
+};
+
 /** app routes definition */
 export const appRoutes: IRoute[] = [
   defaultRoute,
   contactRoute,
-  { path: introPath, component: IntroComponent, label: 'Intro', skip: true },
+  introRoute,
   {
     path: prerequisitesPath,
     label: 'Prerequisites',
@@ -74,6 +84,14 @@ export const appRoutes: IRoute[] = [
       import(
         './page/github-pages-helper-script/github-pages-helper-script.module'
       ).then(m => m.GithubPagesHelperScriptModule)
+  },
+  {
+    path: componentsPath,
+    label: 'Components',
+    loadChildren: () =>
+      import('./page/components/components.module').then(
+        m => m.ComponentsModule
+      )
   },
   { path: emptyPath, redirectTo: introPath, pathMatch: 'full', skip: true },
   { path: '**', redirectTo: '', skip: true }
