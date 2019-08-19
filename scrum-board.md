@@ -2,13 +2,13 @@
 
 ## sprint 2019.08 / 2
 
-| plan | in work | done                                                                                              |
-| ---- | ------- | ------------------------------------------------------------------------------------------------- |
-|      |         | make git cli section                                                                              |
-|      |         | note component                                                                                    |
-|      |         | refactor src\app\core\const\icon.ts, e.g. add prefix 'fa' to all constants, rename the file, etc. |
-|      |         | script to copy index.html to 404.html for github pages                                            |
-|      |         | add meta information for search engines                                                           |
+| plan                   | in work          | done                                                                                              |
+| ---------------------- | ---------------- | ------------------------------------------------------------------------------------------------- |
+| button group component | button component | make git cli section                                                                              |
+| input component        |                  | note component                                                                                    |
+| tabs component         |                  | refactor src\app\core\const\icon.ts, e.g. add prefix 'fa' to all constants, rename the file, etc. |
+| spinner component      |                  | script to copy index.html to 404.html for github pages                                            |
+| modal component        |                  | add meta information for search engines                                                           |
 
 ## sprint 2019.08 / 1
 
