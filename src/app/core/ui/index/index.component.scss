@@ -1,0 +1,58 @@
+@import "../../../../styles.scss";
+
+.index {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  .header {
+    padding-bottom: $spacer;
+    margin-bottom: $spacer;
+    border-bottom: 1px solid $secondary;
+  }
+
+  .body {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+
+    .left {
+      flex-shrink: 0;
+      height: 100%;
+      border-right: 1px solid $secondary;
+      padding-right: $spacer;
+      margin-right: $spacer;
+    }
+
+    .data {
+      width: 100%;
+    }
+
+    .right {
+      flex-shrink: 0;
+      height: 100%;
+      border-left: 1px solid $secondary;
+      padding-left: $spacer;
+      margin-left: $spacer;
+    }
+  }
+
+  .footer {
+    display: flex;
+    margin-top: $spacer;
+
+    .previous {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-start;
+    }
+
+    .next {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+}

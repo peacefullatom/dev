@@ -6,7 +6,7 @@ import { IRoute } from 'src/app/types';
 import { ComponentsComponent } from './components.component';
 import { componentsChildrenRoutes } from './const';
 
-const componentRoutes: IRoute[] = [
+const componentsRoutes: IRoute[] = [
   {
     path: emptyPath,
     component: ComponentsComponent,
@@ -15,7 +15,7 @@ const componentRoutes: IRoute[] = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(componentRoutes)],
+  imports: [RouterModule.forChild(componentsRoutes)],
   exports: [RouterModule]
 })
 export class ComponentsRoutingModule {}
