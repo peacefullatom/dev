@@ -1,0 +1,7 @@
+<a
+  *ngFor="let item of items"
+  [routerLink]="item.path"
+  [routerLinkActive]="active"
+  class="btn btn-primary"
+  >{{ item.data.label }}</a
+>
