@@ -29,14 +29,14 @@ export const defaultRoute: IRoute = {
   path: defaultPath,
   redirectTo: introPath,
   pathMatch: 'full',
-  label: '[DEV]',
+  data: { label: '[DEV]' },
   skip: true
 };
 
 /** path to the contact section */
 export const contactRoute: IRoute = {
   path: contactPath,
-  label: 'Yuriy Markov',
+  data: { label: 'Yuriy Markov' },
   loadChildren: () =>
     import('src/app/page/contact/contact.module').then(m => m.ContactModule),
   skip: true
@@ -46,18 +46,17 @@ export const contactRoute: IRoute = {
 export const introRoute: IRoute = {
   path: introPath,
   component: IntroComponent,
-  label: 'Intro',
+  data: { label: 'Intro' },
   skip: true
 };
 
 /** app routes definition */
 export const appRoutes: IRoute[] = [
   defaultRoute,
-  contactRoute,
   introRoute,
   {
     path: prerequisitesPath,
-    label: 'Prerequisites',
+    data: { label: 'Prerequisites' },
     loadChildren: () =>
       import('./page/prerequisites/prerequisites.module').then(
         m => m.PrerequisitesModule
@@ -65,7 +64,7 @@ export const appRoutes: IRoute[] = [
   },
   {
     path: vsCodeExtensionsPath,
-    label: 'VSCode extensions',
+    data: { label: 'VSCode extensions' },
     loadChildren: () =>
       import('./page/vs-code-extensions/vs-code-extensions.module').then(
         m => m.VsCodeExtensionsModule
@@ -73,13 +72,13 @@ export const appRoutes: IRoute[] = [
   },
   {
     path: gitCliPath,
-    label: 'Git CLI',
+    data: { label: 'Git CLI' },
     loadChildren: () =>
       import('./page/git-cli/git-cli.module').then(m => m.GitCliModule)
   },
   {
     path: githubPagesHelperScriptPath,
-    label: 'Github pages helper script',
+    data: { label: 'Github pages helper script' },
     loadChildren: () =>
       import(
         './page/github-pages-helper-script/github-pages-helper-script.module'
@@ -87,12 +86,13 @@ export const appRoutes: IRoute[] = [
   },
   {
     path: componentsPath,
-    label: 'Components',
+    data: { label: 'Components' },
     loadChildren: () =>
       import('./page/components/components.module').then(
         m => m.ComponentsModule
       )
   },
+  contactRoute,
   { path: emptyPath, redirectTo: introPath, pathMatch: 'full', skip: true },
   { path: '**', redirectTo: '', skip: true }
 ];

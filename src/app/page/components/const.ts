@@ -5,13 +5,13 @@ export const componentsIntroPath = 'intro';
 
 export const componentsChildrenRoutes: IRoute[] = [
   {
-    skip: true,
     path: emptyPath,
-    redirectTo: componentsIntroPath
+    redirectTo: componentsIntroPath,
+    skip: true
   },
   {
-    label: 'Intro',
     path: componentsIntroPath,
+    data: { label: 'Intro' },
     loadChildren: () =>
       import('./components-intro/components-intro.module').then(
         m => m.ComponentsIntroModule

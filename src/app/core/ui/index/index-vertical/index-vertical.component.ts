@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { routeActive } from 'src/app/const';
 import { IRoute } from 'src/app/types';
 
@@ -7,7 +7,7 @@ import { IRoute } from 'src/app/types';
   templateUrl: './index-vertical.component.html',
   styleUrls: ['./index-vertical.component.scss']
 })
-export class IndexVerticalComponent implements OnInit {
+export class IndexVerticalComponent implements OnInit, OnChanges {
   @Input() items: IRoute[] = [];
 
   active = routeActive;
@@ -15,4 +15,10 @@ export class IndexVerticalComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.items) {
+      this.items = this.items.filter(item => !item.skip);
+    }
+  }
 }

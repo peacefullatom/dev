@@ -1,44 +1,41 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { headerShowClass } from 'src/app/base/header/const';
 import { routeActive } from 'src/app/const';
+import { ActivatedRouteService } from 'src/app/core/service/activated-route.service';
 import { IRoute } from 'src/app/types';
 
 @Component({
   selector: 'app-index-horizontal',
   templateUrl: './index-horizontal.component.html',
-  styleUrls: ['./index-horizontal.component.scss']
+  styleUrls: ['./index-horizontal.component.scss'],
+  providers: [ActivatedRouteService]
 })
-export class IndexHorizontalComponent implements OnInit {
+export class IndexHorizontalComponent implements OnInit, OnChanges {
   @Input() items: IRoute[] = [];
+  @ViewChild('host', { static: true }) hostRef: ElementRef<HTMLDivElement>;
+  @ViewChild('toggler', { static: true }) togglerRef: ElementRef<
+    HTMLButtonElement
+  >;
+  @ViewChild('navbar', { static: true }) navbarRef: ElementRef<HTMLDivElement>;
 
-  item: IRoute;
   active = routeActive;
 
-  constructor(
-    private readonly activateRoute: ActivatedRoute,
-    private readonly router: Router
-  ) {}
-
-  ngOnInit() {
-    this.setup();
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.setup();
-      }
-    });
+  private get navbar(): HTMLDivElement {
+    return this.navbarRef.nativeElement;
   }
 
-  private setup(): void {
-    const { firstChild } = this.activateRoute;
-    if (firstChild) {
-      firstChild.url.subscribe({
-        next: url => {
-          if (url instanceof Array && url.length) {
-            const [value] = url;
-            this.item = this.items.find(entry => entry.path === value.path);
-          }
-        }
-      });
+  constructor(public readonly activatedRoute: ActivatedRouteService) {}
+
+  ngOnInit() {}
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.items) {
+      this.items.filter(item => !item.skip);
     }
+  }
+
+  click(): void {
+    this.togglerRef.nativeElement.classList.toggle('collapsed');
+    this.navbar.classList.toggle(headerShowClass);
   }
 }
