@@ -1,8 +1,8 @@
-export const bsCardPrimary = 'text-white bg-primary';
-export const bsCardSecondary = 'text-white bg-secondary';
-export const bsCardSuccess = 'text-white bg-success';
-export const bsCardDanger = 'text-white bg-danger';
-export const bsCardWarning = 'text-white bg-warning';
-export const bsCardInfo = 'text-white bg-info';
-export const bsCardLight = 'bg-light';
-export const bsCardDark = 'text-white bg-dark';
+export const bsNotePrimary = 'border border-primary';
+export const bsNoteSecondary = 'border border-secondary';
+export const bsNoteSuccess = 'border border-success';
+export const bsNoteDanger = 'border border-danger';
+export const bsNoteWarning = 'border border-warning';
+export const bsNoteInfo = 'border border-info';
+export const bsNoteLight = 'border border-light';
+export const bsDarkDark = 'border border-dark';

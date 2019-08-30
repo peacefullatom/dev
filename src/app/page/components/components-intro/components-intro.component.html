@@ -9,10 +9,17 @@
 <p>This section is committed to the UI.</p>
 <p>Here I will show how to build components with Angular and Bootstrap.</p>
 <p>Of course, one may ask: "What about ready to use solutions?".</p>
-<p>And my answer is: "Go ahead and use them!".</p>
+<p>And my answer is:</p>
+<app-blockquote [textAlign]="bsTextAlignCenter"
+  ><p class="mb-0">"Go ahead and use them!"</p></app-blockquote
+>
 <p>Such solutions saving a lot of time for developers and are easy to use.</p>
 <p>
   But, if you want to deep dive into the ecosystem, you should invest your time
   and patience.
 </p>
 <p>That's why I'm offering you to build several components.</p>
+<app-note
+  >You should check a
+  <a [routerLink]="prerequisitesPath">prerequisites</a> section first.</app-note
+>

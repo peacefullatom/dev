@@ -4,6 +4,7 @@
 - add section about vs code hot keys
 - pull requests via cli
 - refactor navbar to be usable in different places
+- move the show css class to the bootstrap constants definition.
 
 # old
 

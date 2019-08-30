@@ -1,19 +1,35 @@
 <div class="index">
   <div *ngIf="hasItems()" class="header d-lg-none">
-    <app-index-horizontal [items]="items"></app-index-horizontal>
+    <app-navbar
+      [bg]="bsBgLight"
+      [bgDark]="bgDark"
+      [items]="items"
+      [rounded]="true"
+      [text]="activatedRoute.firstChild.label"
+    ></app-navbar>
   </div>
   <div class="body">
     <div *ngIf="placementLeft()" class="left d-none d-lg-block">
-      <app-index-vertical [items]="items"></app-index-vertical>
+      <app-navbar
+        [bg]="bsBgLight"
+        [bgDark]="bgDark"
+        [items]="items"
+        [vertical]="true"
+      ></app-navbar>
     </div>
     <div class="data">
       <ng-content></ng-content>
     </div>
     <div *ngIf="placementRight()" class="right d-none d-lg-block">
-      <app-index-vertical [items]="items"></app-index-vertical>
+      <app-navbar
+        [bg]="bsBgLight"
+        [bgDark]="bgDark"
+        [items]="items"
+        [vertical]="true"
+      ></app-navbar>
     </div>
   </div>
-  <div *ngIf="hasItems()" class="footer">
+  <div *ngIf="showFooter()" class="footer">
     <div class="previous">previous</div>
     <div class="next">next</div>
   </div>

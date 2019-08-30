@@ -1,20 +1,20 @@
 import {
-  bsCardDanger,
-  bsCardDark,
-  bsCardInfo,
-  bsCardLight,
-  bsCardPrimary,
-  bsCardSecondary,
-  bsCardSuccess,
-  bsCardWarning,
+  bsDarkDark,
+  bsNoteDanger,
+  bsNoteInfo,
+  bsNoteLight,
+  bsNotePrimary,
+  bsNoteSecondary,
+  bsNoteSuccess,
+  bsNoteWarning,
 } from './const';
 
-export type BsCard =
-  | typeof bsCardPrimary
-  | typeof bsCardSecondary
-  | typeof bsCardSuccess
-  | typeof bsCardDanger
-  | typeof bsCardWarning
-  | typeof bsCardInfo
-  | typeof bsCardLight
-  | typeof bsCardDark;
+export type BsNote =
+  | typeof bsNotePrimary
+  | typeof bsNoteSecondary
+  | typeof bsNoteSuccess
+  | typeof bsNoteDanger
+  | typeof bsNoteWarning
+  | typeof bsNoteInfo
+  | typeof bsNoteLight
+  | typeof bsDarkDark;
