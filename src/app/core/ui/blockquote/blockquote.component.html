@@ -1,6 +1,6 @@
 <blockquote class="blockquote {{ textAlign }}">
-  <ng-content select="[blockquote]"></ng-content>
-  <footer class="blockquote-footer">
+  <ng-content></ng-content>
+  <footer [ngClass]="{ show: showFooter() }" class="blockquote-footer" #footer>
     <ng-content select="[footer]"></ng-content>
   </footer>
 </blockquote>

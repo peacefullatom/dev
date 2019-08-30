@@ -9,6 +9,8 @@ export const emptyPath = '';
 export const defaultPath = emptyPath;
 /** the level up path */
 export const parentPath = '..';
+/** non-relative path */
+export const rootPath = '/';
 /** the contact path */
 export const contactPath = 'contact';
 /** path to the intro section */
@@ -46,7 +48,7 @@ export const contactRoute: IRoute = {
 export const introRoute: IRoute = {
   path: introPath,
   component: IntroComponent,
-  data: { label: 'Intro' },
+  data: { label: '[DEV]' },
   skip: true
 };
 

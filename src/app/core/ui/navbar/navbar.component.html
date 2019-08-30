@@ -1,0 +1,39 @@
+<nav
+  [ngClass]="{
+    'navbar-dark': bgDark,
+    'navbar-light': !bgDark,
+    'position-sticky': sticky,
+    rounded: rounded
+  }"
+  #host
+  class="navbar navbar-expand-lg {{ bg }}"
+>
+  <a *ngIf="brand" [routerLink]="brand.path" class="navbar-brand">
+    {{ brand.data.label }}
+  </a>
+  <span
+    *ngIf="text"
+    class="navbar-text"
+    [ngClass]="{ 'text-dark': !bgDark, 'text-light': bgDark }"
+  >
+    {{ text }}
+  </span>
+  <button (click)="click()" #toggler class="navbar-toggler" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div #navbar class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li *ngFor="let item of items" class="nav-item">
+        <a
+          (click)="click()"
+          [routerLink]="item.path"
+          [routerLinkActive]="routeActive"
+          *ngIf="!item.skip"
+          class="nav-link"
+        >
+          {{ item.data.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,14 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
-import { IndexVerticalComponent } from './index-vertical/index-vertical.component';
+import { NavbarModule } from '../navbar/navbar.module';
 import { IndexComponent } from './index.component';
-import { IndexHorizontalComponent } from './index-horizontal/index-horizontal.component';
 
 @NgModule({
-  declarations: [IndexComponent, IndexVerticalComponent, IndexHorizontalComponent],
+  declarations: [IndexComponent],
   exports: [IndexComponent],
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, NavbarModule]
 })
 export class IndexModule {}

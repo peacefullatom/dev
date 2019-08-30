@@ -1,14 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
-import { bsTextLeft } from '../../const/bootstrap';
-import { BsText } from '../../types/bootstrap';
+import { bsTextAlignLeft } from '../../const/bootstrap';
+import { BsTextAlign } from '../../types/bootstrap';
 
 /**
  * this component provides a blockquote wrapper
  * @example
  * <app-blockquote>
  *  <p class="mb-0">Some awesome quote.</p>
- *  <span>quote source.</span>
+ *  <span footer>quote source.</span>
  * </app-blockquote>
  */
 @Component({
@@ -17,9 +17,14 @@ import { BsText } from '../../types/bootstrap';
   styleUrls: ['./blockquote.component.scss']
 })
 export class BlockquoteComponent implements OnInit {
-  @Input() textAlign: BsText = bsTextLeft;
+  @Input() textAlign: BsTextAlign = bsTextAlignLeft;
+  @ViewChild('footer', { static: true }) footer: ElementRef<HTMLDivElement>;
 
   constructor() {}
 
   ngOnInit() {}
+
+  showFooter(): boolean {
+    return this.footer.nativeElement.childNodes.length > 0;
+  }
 }

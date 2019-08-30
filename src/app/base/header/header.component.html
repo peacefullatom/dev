@@ -1,17 +1,1 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" #host>
-  <a [routerLink]="introRoute.path" class="navbar-brand">
-    {{ defaultRoute.data.label }}
-  </a>
-  <button class="navbar-toggler" type="button" (click)="click()" #toggler>
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" #navbar>
-    <ul class="navbar-nav mr-auto">
-      <app-header-item
-        (itemClick)="click()"
-        [item]="route"
-        *ngFor="let route of routes"
-      ></app-header-item>
-    </ul>
-  </div>
-</nav>
+<app-navbar [brand]="introRoute" [items]="routes" [sticky]="true"></app-navbar>

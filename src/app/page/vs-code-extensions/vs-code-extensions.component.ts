@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { bsTextCenter } from 'src/app/core/const/bootstrap';
+
 import { codeUrl } from '../const';
 
 @Component({
