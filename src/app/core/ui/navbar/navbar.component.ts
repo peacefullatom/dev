@@ -1,9 +1,8 @@
 import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
-import { routeActive } from 'src/app/const';
 import { IRoute } from 'src/app/types';
 
-import { bsBgDark } from '../../const/bootstrap';
-import { BsBg } from '../../types/bootstrap';
+import { bsActive, bsBgDark } from '../../bootstrap.const';
+import { BsBg } from '../../bootstrap.types';
 import { navbarShowClass } from './const';
 
 @Component({
@@ -34,7 +33,7 @@ export class NavbarComponent implements OnInit {
   >;
   @ViewChild('navbar', { static: true }) navbarRef: ElementRef<HTMLDivElement>;
 
-  routeActive = routeActive;
+  readonly routeActive = bsActive;
 
   private get navbar(): HTMLDivElement {
     return this.navbarRef.nativeElement;

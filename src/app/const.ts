@@ -1,8 +1,6 @@
 import { IntroComponent } from './intro/intro.component';
 import { IRoute } from './types';
 
-/** the default route active css class */
-export const routeActive = 'active';
 /** the empty path */
 export const emptyPath = '';
 /** the default path */
