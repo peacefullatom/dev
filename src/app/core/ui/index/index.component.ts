@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { IRoute } from 'src/app/types';
 
-import { bsBgLight } from '../../const/bootstrap';
+import { bsBgLight } from '../../bootstrap.const';
 import { ActivatedRouteService } from '../../service/activated-route.service';
 import { indexPlacementLeft, indexPlacementRight } from './const';
 import { IndexPlacement } from './types';
@@ -16,8 +17,37 @@ export class IndexComponent implements OnInit {
   @Input() placement: IndexPlacement = indexPlacementLeft;
   @Input() items: IRoute[] = [];
 
-  bsBgLight = bsBgLight;
-  bgDark = false;
+  readonly bsBgLight = bsBgLight;
+  readonly bgDark = false;
+  readonly faChevronCircleRight = faChevronCircleRight;
+  readonly faChevronCircleLeft = faChevronCircleLeft;
+
+  get previousLink(): string {
+    const link = this.items[this.itemIndex - 1];
+    return link ? link.path : '#';
+  }
+
+  get previousLabel(): string {
+    const link = this.items[this.itemIndex - 1];
+    return link && link.data ? link.data.label : 'previous';
+  }
+
+  get nextLink(): string {
+    const link = this.items[this.itemIndex + 1];
+    return link ? link.path : '#';
+  }
+
+  get nextLabel(): string {
+    const link = this.items[this.itemIndex + 1];
+    return link && link.data ? link.data.label : 'next';
+  }
+
+  private get itemIndex(): number {
+    return this.items.findIndex(
+      item =>
+        item.data && item.data.label === this.activatedRoute.firstChild.label
+    );
+  }
 
   constructor(public readonly activatedRoute: ActivatedRouteService) {}
 
@@ -37,5 +67,13 @@ export class IndexComponent implements OnInit {
 
   showFooter(): boolean {
     return this.hasItems() && this.items.length > 1;
+  }
+
+  showPrevious(): boolean {
+    return this.itemIndex > 0;
+  }
+
+  showNext(): boolean {
+    return this.itemIndex < this.items.length - 1;
   }
 }

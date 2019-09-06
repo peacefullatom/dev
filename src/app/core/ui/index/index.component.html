@@ -30,7 +30,17 @@
     </div>
   </div>
   <div *ngIf="showFooter()" class="footer">
-    <div class="previous">previous</div>
-    <div class="next">next</div>
+    <div [ngClass]="{ show: showPrevious() }" class="previous">
+      <a [routerLink]="previousLink">
+        <fa-icon [icon]="faChevronCircleLeft"></fa-icon>&nbsp;{{
+          previousLabel
+        }}
+      </a>
+    </div>
+    <div [ngClass]="{ show: showNext() }" class="next">
+      <a [routerLink]="nextLink">
+        {{ nextLabel }}&nbsp;<fa-icon [icon]="faChevronCircleRight"></fa-icon>
+      </a>
+    </div>
   </div>
 </div>
