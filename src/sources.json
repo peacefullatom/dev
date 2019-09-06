@@ -1,0 +1,22 @@
+{
+  "copyJs": {
+    "path": "copy.js",
+    "hash": "uqwyn62x"
+  },
+  "buttonComponentHtml": {
+    "path": "src/app/core/ui/button/button.component.html",
+    "hash": "r0to1sc4"
+  },
+  "buttonComponentScss": {
+    "path": "src/app/core/ui/button/button.component.scss",
+    "hash": "ih4zqnbc"
+  },
+  "buttonComponentTs": {
+    "path": "src/app/core/ui/button/button.component.ts",
+    "hash": "0zs5dhqu"
+  },
+  "buttonModuleTs": {
+    "path": "src/app/core/ui/button/button.module.ts",
+    "hash": "ta6uq0l1"
+  }
+}

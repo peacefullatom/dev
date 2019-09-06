@@ -1,4 +1,4 @@
-@import "../../../../styles.scss";
+@import '../../../../styles.scss';
 
 .index {
   display: flex;
@@ -44,15 +44,23 @@
     margin-top: $spacer;
 
     .previous {
-      display: flex;
+      display: none;
       flex-grow: 1;
       justify-content: flex-start;
+
+      &.show {
+        display: flex;
+      }
     }
 
     .next {
-      display: flex;
+      display: none;
       flex-grow: 1;
       justify-content: flex-end;
+
+      &.show {
+        display: flex;
+      }
     }
   }
 }

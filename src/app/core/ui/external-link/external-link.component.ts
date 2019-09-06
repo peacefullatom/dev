@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { faIconSizeXs } from '../../const/icon';
+import { faIconSizeXs } from '../../fa.const';
 
 @Component({
   selector: 'app-external-link',
@@ -11,8 +11,8 @@ import { faIconSizeXs } from '../../const/icon';
 export class ExternalLinkComponent implements OnInit {
   @Input() href = '';
 
-  faExternalLinkSquareAlt = faExternalLinkSquareAlt;
-  faIconSizeXs = faIconSizeXs;
+  readonly faExternalLinkSquareAlt = faExternalLinkSquareAlt;
+  readonly faIconSizeXs = faIconSizeXs;
 
   constructor() {}
 

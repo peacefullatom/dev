@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
-import { bsTextAlignLeft } from '../../const/bootstrap';
-import { BsTextAlign } from '../../types/bootstrap';
+import { bsTextAlignLeft } from '../../bootstrap.const';
+import { BsTextAlign } from '../../bootstrap.types';
 
 /**
  * this component provides a blockquote wrapper

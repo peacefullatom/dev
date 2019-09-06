@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { contactRoute, routeActive } from 'src/app/const';
+import { contactRoute } from 'src/app/const';
+import { bsActive } from 'src/app/core/bootstrap.const';
 
 /** footer component */
 @Component({
@@ -8,9 +9,9 @@ import { contactRoute, routeActive } from 'src/app/const';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  year = new Date().getFullYear();
-  contact = contactRoute;
-  active = routeActive;
+  readonly year = new Date().getFullYear();
+  readonly contact = contactRoute;
+  readonly active = bsActive;
 
   constructor() {}
 

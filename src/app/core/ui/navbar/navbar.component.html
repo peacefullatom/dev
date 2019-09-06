@@ -22,7 +22,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div #navbar class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
+    <ul [ngClass]="{ 'flex-column': vertical }" class="navbar-nav mr-auto">
       <li *ngFor="let item of items" class="nav-item">
         <a
           (click)="click()"

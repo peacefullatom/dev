@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import sources from 'src/sources.json';
 
 @Component({
   selector: 'app-github-pages-helper-script',
@@ -8,19 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class GithubPagesHelperScriptComponent implements OnInit {
   angularCliGhPagesUrl =
     'https://github.com/angular-schule/angular-cli-ghpages';
-  copyJs = `
-/**
-* this small utility script allows copying freshly built index.html into 404.html
-*/
-var fse = require("fs-extra");
-var path = \`\${__dirname}/docs\`;
-fse
-  .copy(\`\${path}/index.html\`, \`\${path}/404.html\`)
-  .then(
-    () => console.log("404.html was copied successfully."),
-    err => console.error("404.html was not copied.\\n" + err)
-  );
-  `;
+  copyJs: string;
   packageJson = `
   ...
   "scripts": {
@@ -36,5 +25,10 @@ fse
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    fetch(`assets/sources/${sources.copyJs.hash}`).then(
+      data => data.text().then(text => (this.copyJs = text)),
+      error => console.log(error)
+    );
+  }
 }

@@ -1,5 +1,8 @@
 <pre
-  *ngIf="!value"
   class="{{ className }}"
+  [ngClass]="{ hide: content }"
 ><code><ng-content></ng-content></code></pre>
-<pre *ngIf="value" class="{{ className }}"><code>{{value}}</code></pre>
+<pre
+  [ngClass]="{ hide: !content }"
+  class="{{ className }}"
+><code #code>{{render()}}</code></pre>
