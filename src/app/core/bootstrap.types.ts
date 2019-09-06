@@ -9,6 +9,24 @@ import {
   bsBgTransparent,
   bsBgWarning,
   bsBgWhite,
+  bsBtnDanger,
+  bsBtnDark,
+  bsBtnInfo,
+  bsBtnLight,
+  bsBtnLink,
+  bsBtnOutlineDanger,
+  bsBtnOutlineDark,
+  bsBtnOutlineInfo,
+  bsBtnOutlineLight,
+  bsBtnOutlineLink,
+  bsBtnOutlinePrimary,
+  bsBtnOutlineSecondary,
+  bsBtnOutlineSuccess,
+  bsBtnOutlineWarning,
+  bsBtnPrimary,
+  bsBtnSecondary,
+  bsBtnSuccess,
+  bsBtnWarning,
   bsTexBlack50,
   bsTexBody,
   bsTexDark,
@@ -25,7 +43,7 @@ import {
   bsTextWarning,
   bsTexWhite,
   bsTexWhite50,
-} from '../const/bootstrap';
+} from './bootstrap.const';
 
 export type BsTextAlign =
   | typeof bsTextAlignLeft
@@ -58,3 +76,23 @@ export type BsText =
   | typeof bsTexWhite
   | typeof bsTexBlack50
   | typeof bsTexWhite50;
+
+export type BsBtn =
+  | typeof bsBtnPrimary
+  | typeof bsBtnSecondary
+  | typeof bsBtnSuccess
+  | typeof bsBtnDanger
+  | typeof bsBtnWarning
+  | typeof bsBtnInfo
+  | typeof bsBtnLight
+  | typeof bsBtnDark
+  | typeof bsBtnLink
+  | typeof bsBtnOutlinePrimary
+  | typeof bsBtnOutlineSecondary
+  | typeof bsBtnOutlineSuccess
+  | typeof bsBtnOutlineDanger
+  | typeof bsBtnOutlineWarning
+  | typeof bsBtnOutlineInfo
+  | typeof bsBtnOutlineLight
+  | typeof bsBtnOutlineDark
+  | typeof bsBtnOutlineLink;
