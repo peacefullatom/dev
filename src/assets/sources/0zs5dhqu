@@ -1,0 +1,22 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
+import { bsBtnOutlinePrimary } from '../../bootstrap.const';
+import { BsBtn } from '../../bootstrap.types';
+
+@Component({
+  selector: 'app-button',
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.scss']
+})
+export class ButtonComponent implements OnInit {
+  @Input() title = '';
+  @Input() icon: IconDefinition;
+  @Input() style: BsBtn = bsBtnOutlinePrimary;
+  @Input() boldTitle = false;
+  @Input() disabled = false;
+
+  constructor() {}
+
+  ngOnInit() {}
+}

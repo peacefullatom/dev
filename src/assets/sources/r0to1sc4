@@ -1,0 +1,10 @@
+&lt;div class="btn {{ style }}" [ngClass]="{ disabled: disabled() }"&gt;
+  &lt;div #content&gt;
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/div&gt;
+  &lt;ng-container *ngIf="!content.innerHTML.trim()"&gt;
+    &lt;div&gt;
+      &lt;fa-icon *ngIf="icon" [icon]="icon" class="pr-2"&gt;&lt;/fa-icon&gt;{{ title }}
+    &lt;/div&gt;
+  &lt;/ng-container&gt;
+&lt;/div&gt;
