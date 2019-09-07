@@ -14,7 +14,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently -k \"ng serve\" \"nodemon sources.js\"",
-    "build": "ng build --prod && node copy.js",
+    "build": "node sources.js && ng build --prod && node copy.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
