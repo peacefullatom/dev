@@ -1,8 +1,15 @@
-<div (click)="handleClick()" [ngClass]="{'disabled': checkDisabled(), 'bold': boldTitle}" class="btn {{style}}" id="{{id}}">
+<div
+  (click)="handleClick()"
+  [ngClass]="{ disabled: checkDisabled() }"
+  class="btn {{ style }}"
+  id="{{ id }}"
+>
   <div #content>
     <ng-content></ng-content>
   </div>
   <ng-container *ngIf="!content.innerHTML.trim()">
-    <div><fa-icon *ngIf="icon" [icon]="icon" class="pr-2"></fa-icon>{{title}}</div>
+    <div>
+      <fa-icon *ngIf="icon" [icon]="icon" class="pr-2"></fa-icon>{{ title }}
+    </div>
   </ng-container>
 </div>
