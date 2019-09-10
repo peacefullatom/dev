@@ -1,0 +1,12 @@
+<app-tabs [tabs]="tabs" [fill]="true"></app-tabs>
+<div class="carousel">
+  <div class="carousel-inner">
+    <div
+      [ngClass]="{ active: tab.active }"
+      *ngFor="let tab of tabs"
+      class="carousel-item"
+    >
+      <app-code [html]="tab.source"></app-code>
+    </div>
+  </div>
+</div>
