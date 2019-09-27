@@ -1,10 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 
-import { bsBtnOutlinePrimary } from '../../bootstrap.const';
-import { BsBtn } from '../../bootstrap.types';
+import { bsBtnOutlinePrimary, bsBtnSizeNormal } from '../../bootstrap.const';
+import { BsBtn, BsBtnSize } from '../../bootstrap.types';
 import { IdService } from '../../service/id.service';
-import { ButtonDisabled } from './types';
 
 @Component({
   selector: 'app-button',
@@ -13,36 +11,24 @@ import { ButtonDisabled } from './types';
 })
 export class ButtonComponent implements OnInit {
   @Input() id: string;
-  @Input() title = '';
-  @Input() icon: IconDefinition;
   @Input() style: BsBtn = bsBtnOutlinePrimary;
-  @Input() disabled: ButtonDisabled;
-  @Input() click: () => void;
+  @Input() size: BsBtnSize = bsBtnSizeNormal;
+  @Input() disabled: boolean;
 
-  constructor(private readonly idService: IdService) {}
+  constructor(
+    protected readonly elementRef: ElementRef<HTMLDivElement>,
+    protected readonly idService: IdService
+  ) {}
 
   ngOnInit() {
     this.id = this.id || this.idService.nextId();
-
-    if (typeof this.disabled !== 'function' && typeof this.disabled !== 'boolean') {
-      this.disabled = () => false;
-    }
   }
 
   checkDisabled(): boolean {
-    if (typeof this.disabled === 'function') {
-      return this.disabled();
-    }
-    if (typeof this.disabled === 'boolean') {
-      return this.disabled;
-    }
+    this.elementRef.nativeElement.style.pointerEvents = this.disabled
+      ? 'none'
+      : 'all';
 
-    throw new Error(`unknown type of disabled input ${typeof this.disabled}`);
-  }
-
-  handleClick(): void {
-    if (!this.checkDisabled() && typeof this.click === 'function') {
-      this.click();
-    }
+    return this.disabled;
   }
 }

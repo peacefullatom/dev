@@ -17,6 +17,11 @@ export interface ISourceViewer {
   component?: string;
   /**
    * this will be converted into an id:
+   * - %singleComponent%ComponentTs
+   */
+  singleComponent?: string;
+  /**
+   * this will be converted into an id:
    * - %directive%DirectiveTs
    */
   directive?: string;

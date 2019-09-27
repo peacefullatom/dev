@@ -25,6 +25,9 @@ import {
   bsBtnOutlineWarning,
   bsBtnPrimary,
   bsBtnSecondary,
+  bsBtnSizeLarge,
+  bsBtnSizeNormal,
+  bsBtnSizeSmall,
   bsBtnSuccess,
   bsBtnWarning,
   bsTexBlack50,
@@ -76,6 +79,11 @@ export type BsText =
   | typeof bsTexWhite
   | typeof bsTexBlack50
   | typeof bsTexWhite50;
+
+export type BsBtnSize =
+  | typeof bsBtnSizeSmall
+  | typeof bsBtnSizeNormal
+  | typeof bsBtnSizeLarge;
 
 export type BsBtn =
   | typeof bsBtnPrimary

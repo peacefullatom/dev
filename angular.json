@@ -113,5 +113,8 @@
       }
     }
   },
-  "defaultProject": "peacefullatom"
+  "defaultProject": "peacefullatom",
+  "cli": {
+    "analytics": "dfe82475-6fd0-446c-a5d5-24e0d53aab10"
+  }
 }

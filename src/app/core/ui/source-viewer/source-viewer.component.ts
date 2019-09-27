@@ -56,6 +56,7 @@ export class SourceViewerComponent implements OnInit, AfterViewInit {
       const {
         id,
         component,
+        singleComponent,
         directive,
         module,
         template,
@@ -70,6 +71,9 @@ export class SourceViewerComponent implements OnInit, AfterViewInit {
           (item, index) =>
             extract(`${component}${item}`, active ? index === 0 : false)
         );
+      }
+      if (singleComponent) {
+        extract(`${singleComponent}ComponentTs`, active);
       }
       if (directive) {
         extract(`${directive}DirectiveTs`, active);

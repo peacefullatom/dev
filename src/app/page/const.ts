@@ -4,3 +4,5 @@ export const codeUrl = 'https://code.visualstudio.com/';
 export const gitUrl = 'https://git-scm.com/';
 /** url to git gui's */
 export const gitGuiUrl = 'https://git-scm.com/downloads/guis';
+/** url to bootstrap */
+export const bootstrapUrl = 'https://getbootstrap.com/';

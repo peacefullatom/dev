@@ -4,6 +4,8 @@
 
 /** file system operations */
 const fse = require('fs-extra');
+/** line operations */
+const readline = require('readline');
 /** source for hash generation */
 const hashSource = 'abcdefghijklmnopqrstuvwxyz0123456789';
 /** hash length */
@@ -26,6 +28,14 @@ const hash = () =>
       hashLength
     );
 
+/** progress output */
+const progress = (step, steps) => {
+  readline.clearLine(process.stdout);
+  readline.cursorTo(process.stdout, 0);
+  const percent = Math.ceil((step * 100) / steps);
+  process.stdout.write(`${percent}% of source files processed`);
+};
+
 if (sources) {
   /**
    * empty directory and create it if it does not exist yet
@@ -38,7 +48,8 @@ if (sources) {
     // getting source data
     const source = sources[sourceId];
     // progress output
-    console.log(`processing ${index + 1} of ${keys.length} files`);
+    // console.log(`processing ${index + 1} of ${keys.length} files`);
+    progress(index + 1, keys.length);
     // set hash
     if (!source.hash) {
       source.hash = hash();
@@ -53,6 +64,7 @@ if (sources) {
     // save parsed file
     fse.writeFileSync(`${destinationPath}/${source.hash}`, data);
   }
+  process.stdout.write('\n');
   // update sources.json
   fse.writeFileSync(sourcesPath, JSON.stringify(sources, null, 2));
 } else {

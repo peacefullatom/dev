@@ -3,6 +3,9 @@ const bsBg = 'bg';
 const bsBtn = 'btn';
 const bsOutline = 'outline';
 
+const bsSmall = 'sm';
+const bsLarge = 'lg';
+
 const bsPrimary = 'primary';
 const bsSecondary = 'secondary';
 const bsSuccess = 'success';
@@ -49,6 +52,10 @@ export const bsTexMuted = `${bsText}-${bsMuted}`;
 export const bsTexWhite = `${bsText}-${bsWhite}`;
 export const bsTexBlack50 = `${bsText}-${bsBlack50}`;
 export const bsTexWhite50 = `${bsText}-${bsWhite50}`;
+
+export const bsBtnSizeSmall = `${bsBtn}-${bsSmall}`;
+export const bsBtnSizeNormal = ``;
+export const bsBtnSizeLarge = `${bsBtn}-${bsLarge}`;
 
 export const bsBtnPrimary = `${bsBtn}-${bsPrimary}`;
 export const bsBtnSecondary = `${bsBtn}-${bsSecondary}`;
