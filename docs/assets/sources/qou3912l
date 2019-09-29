@@ -1,0 +1,7 @@
+&lt;button
+  [ngClass]="{ disabled: checkDisabled() }"
+  class="btn {{ style }} {{ size }}"
+  id="{{ id }}"
+&gt;
+  &lt;ng-content&gt;&lt;/ng-content&gt;
+&lt;/button&gt;

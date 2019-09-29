@@ -1,0 +1,9 @@
+@import '../../../../global.scss';
+
+.btn {
+  cursor: pointer;
+
+  &amp;.disabled {
+    pointer-events: none;
+  }
+}
