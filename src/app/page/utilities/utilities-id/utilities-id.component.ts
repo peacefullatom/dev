@@ -22,6 +22,8 @@ export class UtilitiesIdComponent implements OnInit {
 }`;
   readonly templateCode = `<div class="card {{ type }} mb-3" id="{{ id }}"></div>`;
   readonly customIdCode = `<app-note [id]="'customId'">Follow the KISS rule!</app-note>`;
+  readonly implementationAnchor = 'implementation';
+  readonly conclusionAnchor = 'conclusion';
 
   constructor() {}
 
