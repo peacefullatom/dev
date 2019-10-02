@@ -3,6 +3,7 @@ import { IRoute } from 'src/app/types';
 
 export const componentsIntroPath = 'intro';
 export const componentsButtonPath = 'button';
+export const componentsAlertPath = 'alert';
 
 export const componentsChildrenRoutes: IRoute[] = [
   {
@@ -24,6 +25,14 @@ export const componentsChildrenRoutes: IRoute[] = [
     loadChildren: () =>
       import('./components-button/components-button.module').then(
         m => m.ComponentsButtonModule
+      )
+  },
+  {
+    path: componentsAlertPath,
+    data: { label: 'Alert' },
+    loadChildren: () =>
+      import('./components-alert/components-alert.module').then(
+        m => m.ComponentsAlertModule
       )
   }
 ];
