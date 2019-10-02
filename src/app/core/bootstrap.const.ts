@@ -1,7 +1,8 @@
-const bsText = 'text';
+const bsAlert = 'alert';
 const bsBg = 'bg';
 const bsBtn = 'btn';
 const bsOutline = 'outline';
+const bsText = 'text';
 
 const bsSmall = 'sm';
 const bsLarge = 'lg';
@@ -76,3 +77,12 @@ export const bsBtnOutlineInfo = `${bsBtn}-${bsOutline}-${bsInfo}`;
 export const bsBtnOutlineLight = `${bsBtn}-${bsOutline}-${bsLight}`;
 export const bsBtnOutlineDark = `${bsBtn}-${bsOutline}-${bsDark}`;
 export const bsBtnOutlineLink = `${bsBtn}-${bsOutline}-${bsLink}`;
+
+export const bsAlertPrimary = `${bsAlert}-${bsPrimary}`;
+export const bsAlertSecondary = `${bsAlert}-${bsSecondary}`;
+export const bsAlertSuccess = `${bsAlert}-${bsSuccess}`;
+export const bsAlertDanger = `${bsAlert}-${bsDanger}`;
+export const bsAlertWarning = `${bsAlert}-${bsWarning}`;
+export const bsAlertInfo = `${bsAlert}-${bsInfo}`;
+export const bsAlertLight = `${bsAlert}-${bsLight}`;
+export const bsAlertDark = `${bsAlert}-${bsDark}`;

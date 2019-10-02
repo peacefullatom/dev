@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BodyModule } from './base/body/body.module';
 import { FooterModule } from './base/footer/footer.module';
 import { HeaderModule } from './base/header/header.module';
+import { AlertsModule } from './core/ui/alerts/alerts.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { HeaderModule } from './base/header/header.module';
     HeaderModule,
     BodyModule,
     FooterModule,
+    AlertsModule,
     AppRoutingModule
   ],
   providers: [],
