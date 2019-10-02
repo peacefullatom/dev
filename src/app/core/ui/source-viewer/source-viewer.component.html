@@ -1,5 +1,5 @@
-<app-tabs [tabs]="tabs" [fill]="true"></app-tabs>
-<div class="carousel">
+<app-tabs [tabs]="tabs" [fill]="true" [id]="id"></app-tabs>
+<div class="carousel" id="{{ id }}">
   <div class="carousel-inner">
     <div
       [ngClass]="{ active: tab.active }"

@@ -1,0 +1,45 @@
+<h4>Id service</h4>
+<p>
+  I prefer to add an id to all components which can appear more than once in a
+  single view.
+</p>
+<p>
+  Assigning ids makes it easier to debug the project.
+</p>
+<p>
+  But adding ids manually takes time and tons of imagination.
+</p>
+<p>
+  To simplify such a routine task, I'm using the next solution:
+</p>
+<app-source-viewer [sources]="idServiceSources"></app-source-viewer>
+<h5>Implementation</h5>
+<p>Here is an example:</p>
+<app-source-viewer [sources]="noteSources"></app-source-viewer>
+<p>
+  The implementation is quite easy.
+</p>
+<p>
+  First of all, a component has an input field named id of type string.
+</p>
+<app-code>{{ inputCode }}</app-code>
+<p>
+  After that, you need to inject a service into the constructor:
+</p>
+<app-code>{{ injectionCode }}</app-code>
+<p>
+  Check the id during the initialization:
+</p>
+<app-code>{{ initializationCode }}</app-code>
+<p>
+  Lastly, assign an id to a top-level tag of the template:
+</p>
+<app-code>{{ templateCode }}</app-code>
+<p>Also, this approach allows defining a custom id in a template:</p>
+<app-code>{{ customIdCode }}</app-code>
+<h5>Conclusion</h5>
+<p>
+  Ids allow you debug your code and layout. Automatically generated ids are a
+  good solution. Having an ability to define custom id adds flexibility to this
+  solution.
+</p>

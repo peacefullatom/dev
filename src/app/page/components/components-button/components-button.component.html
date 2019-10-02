@@ -28,13 +28,13 @@
 <p>Let's have a look at the base class one can use.</p>
 <app-source-viewer [sources]="buttonSources"></app-source-viewer>
 <p>The design of this class is simple and minimalistic.</p>
-<h5>Template</h5>
+<h5 id="{{ templateAnchor }}">Template</h5>
 <p>
   The template contains a simple HTML button component as its base. The
   <code>button</code> tag contains an id, a CSS class definition based on
   settings, and a dynamic CSS class to track disabled state.
 </p>
-<h5>Style</h5>
+<h5 id="{{ styleAnchor }}">Style</h5>
 <p>
   Style definitions are minimal and containing only the most basic settings. For
   the most part, they are adding <code>cursor</code> pointer and removing
@@ -42,7 +42,7 @@
   definitions are
   <app-external-link [href]="bootstrapUrl">Bootstrap</app-external-link>.
 </p>
-<h5>Component</h5>
+<h5 id="{{ componentAnchor }}">Component</h5>
 <p>
   The component contains several input interfaces: an id, a style, a size, and a
   disabled state. Some of the interfaces have a default value.
@@ -52,12 +52,12 @@
   Because a click event is applied directly to the shadow DOM element, this
   method affects the <code>pointer-events</code> of the host element.
 </p>
-<h5>Module</h5>
+<h5 id="{{ moduleAnchor }}">Module</h5>
 <p>
   The module of this component contains only the required definitions and
   imports.
 </p>
-<h5>Example</h5>
+<h5 id="{{ exampleAnchor }}">Example</h5>
 <p>Let's assume that some project requires a set of ready to use buttons.</p>
 <p>
   Among this set, there could be a default button for all positive cases. E.g.
@@ -76,7 +76,7 @@
   on, one can use it as follows:
 </p>
 <app-code>{{ buttonPositiveExampleCode }}</app-code>
-<h5>Conclusion</h5>
+<h5 id="{{ conclusionAnchor }}">Conclusion</h5>
 <p>
   Having a set of predefined components boosts your project development. The
   button is a basic block of an interface. Buttons can have lots of predefined

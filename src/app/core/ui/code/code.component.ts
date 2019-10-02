@@ -1,11 +1,14 @@
 import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
+import { IdService } from '../../service/id.service';
+
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
   styleUrls: ['./code.component.scss']
 })
 export class CodeComponent implements OnInit, OnChanges {
+  @Input() id: string;
   /** the value will be stringified */
   @Input() value: string;
   /** the text will be inserted as is */
@@ -17,9 +20,10 @@ export class CodeComponent implements OnInit, OnChanges {
   className = 'bg-dark text-light py-3 px-3 rounded';
   content = false;
 
-  constructor() {}
+  constructor(private readonly idService: IdService) {}
 
   ngOnInit() {
+    this.id = this.id || this.idService.nextId();
     if (this.value && typeof this.value !== 'string') {
       this.value = JSON.stringify(this.value);
     }

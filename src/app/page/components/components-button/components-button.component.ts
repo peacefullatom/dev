@@ -28,6 +28,12 @@ export class ComponentsButtonComponent implements OnInit {
   readonly bootstrapUrl = bootstrapUrl;
   readonly buttonCode = `<button></button>`;
   readonly buttonPositiveExampleCode = `<app-button-positive (click)="agree()">Agree</app-button-positive>`;
+  readonly templateAnchor = 'template';
+  readonly styleAnchor = 'style';
+  readonly componentAnchor = 'component';
+  readonly moduleAnchor = 'module';
+  readonly exampleAnchor = 'example';
+  readonly conclusionAnchor = 'conclusion';
 
   constructor() {}
 

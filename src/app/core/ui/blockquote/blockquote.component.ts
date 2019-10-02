@@ -2,6 +2,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 import { bsTextAlignLeft } from '../../bootstrap.const';
 import { BsTextAlign } from '../../bootstrap.types';
+import { IdService } from '../../service/id.service';
 
 /**
  * this component provides a blockquote wrapper
@@ -17,12 +18,15 @@ import { BsTextAlign } from '../../bootstrap.types';
   styleUrls: ['./blockquote.component.scss']
 })
 export class BlockquoteComponent implements OnInit {
+  @Input() id: string;
   @Input() textAlign: BsTextAlign = bsTextAlignLeft;
   @ViewChild('footer', { static: true }) footer: ElementRef<HTMLDivElement>;
 
-  constructor() {}
+  constructor(private readonly idService: IdService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.id = this.id || this.idService.nextId();
+  }
 
   showFooter(): boolean {
     return this.footer.nativeElement.childNodes.length > 0;

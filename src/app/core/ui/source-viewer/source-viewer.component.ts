@@ -11,6 +11,7 @@ import { IJsonSource, ISourceViewerTab, SourceViewer } from './types';
   styleUrls: ['./source-viewer.component.scss']
 })
 export class SourceViewerComponent implements OnInit, AfterViewInit {
+  @Input() id: string;
   @Input() sources: SourceViewer = [];
   @ViewChild('data', { static: true }) data: ElementRef<HTMLDivElement>;
 
@@ -19,6 +20,7 @@ export class SourceViewerComponent implements OnInit, AfterViewInit {
   constructor(private readonly idService: IdService) {}
 
   ngOnInit() {
+    this.id = this.id || this.idService.nextId();
     /** due to specific of importing of json we need this workaround */
     const extractData = (id: string): IJsonSource =>
       (sources as any).default[id];
@@ -60,6 +62,7 @@ export class SourceViewerComponent implements OnInit, AfterViewInit {
         directive,
         module,
         template,
+        service,
         style,
         active
       } = source;
@@ -80,6 +83,9 @@ export class SourceViewerComponent implements OnInit, AfterViewInit {
       }
       if (module) {
         extract(`${module}ModuleTs`, active);
+      }
+      if (service) {
+        extract(`${service}ServiceTs`, active);
       }
       if (template) {
         extract(`${template}ComponentHtml`, active);

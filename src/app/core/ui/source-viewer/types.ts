@@ -32,6 +32,11 @@ export interface ISourceViewer {
   module?: string;
   /**
    * this will be converted into an id:
+   * - %service%ServiceTs
+   */
+  service?: string;
+  /**
+   * this will be converted into an id:
    * - %template%ComponentHtml
    */
   template?: string;

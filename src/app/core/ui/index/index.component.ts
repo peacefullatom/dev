@@ -4,6 +4,7 @@ import { IRoute } from 'src/app/types';
 
 import { bsBgLight } from '../../bootstrap.const';
 import { ActivatedRouteService } from '../../service/activated-route.service';
+import { IdService } from '../../service/id.service';
 import { indexPlacementLeft, indexPlacementRight } from './const';
 import { IndexPlacement } from './types';
 
@@ -14,6 +15,7 @@ import { IndexPlacement } from './types';
   providers: [ActivatedRouteService]
 })
 export class IndexComponent implements OnInit {
+  @Input() id: string;
   @Input() placement: IndexPlacement = indexPlacementLeft;
   @Input() items: IRoute[] = [];
 
@@ -49,9 +51,14 @@ export class IndexComponent implements OnInit {
     );
   }
 
-  constructor(public readonly activatedRoute: ActivatedRouteService) {}
+  constructor(
+    public readonly activatedRoute: ActivatedRouteService,
+    private readonly idService: IdService
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.id = this.id || this.idService.nextId();
+  }
 
   placementLeft(): boolean {
     return this.hasItems() && this.placement === indexPlacementLeft;
