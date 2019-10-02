@@ -26,5 +26,21 @@
   "buttonPositiveModuleTs": {
     "path": "src/app/core/ui/button-positive/button-positive.module.ts",
     "hash": "hntwfkcq"
+  },
+  "idServiceTs": {
+    "path": "src/app/core/service/id.service.ts",
+    "hash": "mvwod4lq"
+  },
+  "idServiceConstTs": {
+    "path": "src/app/core/service/id.service.const.ts",
+    "hash": "k1bufy6s"
+  },
+  "noteComponentTs": {
+    "path": "src/app/core/ui/note/note.component.ts",
+    "hash": "dxnbk36y"
+  },
+  "noteComponentHtml": {
+    "path": "src/app/core/ui/note/note.component.html",
+    "hash": "ywrphxae"
   }
 }
