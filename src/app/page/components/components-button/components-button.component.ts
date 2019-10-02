@@ -35,6 +35,7 @@ export class ComponentsButtonComponent implements OnInit {
   readonly moduleAnchor = 'module';
   readonly exampleAnchor = 'example';
   readonly conclusionAnchor = 'conclusion';
+  readonly referenceAnchor = 'reference';
   readonly idServicePath = idServicePath;
 
   constructor() {}
