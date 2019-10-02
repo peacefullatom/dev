@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { bsActive } from '../../bootstrap.const';
+import { IdService } from '../../service/id.service';
 import { tabsTypeButton } from './const';
 import { ITabsItem, TabsType } from './types';
 
@@ -10,6 +11,7 @@ import { ITabsItem, TabsType } from './types';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit {
+  @Input() id: string;
   /** tabs definition */
   @Input() tabs: ITabsItem[] = [];
   /** tabs type: anchors or buttons */
@@ -19,9 +21,11 @@ export class TabsComponent implements OnInit {
 
   readonly active = bsActive;
 
-  constructor() {}
+  constructor(private readonly idService: IdService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.id = this.id || this.idService.nextId();
+  }
 
   handleClick(event: MouseEvent, tab: ITabsItem): void {
     if (this.type === tabsTypeButton) {

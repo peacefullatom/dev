@@ -3,6 +3,7 @@ import { IRoute } from 'src/app/types';
 
 import { bsActive, bsBgDark } from '../../bootstrap.const';
 import { BsBg } from '../../bootstrap.types';
+import { IdService } from '../../service/id.service';
 import { navbarShowClass } from './const';
 
 @Component({
@@ -11,6 +12,7 @@ import { navbarShowClass } from './const';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  @Input() id: string;
   /** brand data */
   @Input() brand: IRoute;
   /** static text */
@@ -47,9 +49,11 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  constructor(private readonly idService: IdService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.id = this.id || this.idService.nextId();
+  }
 
   click(): void {
     this.togglerRef.nativeElement.classList.toggle('collapsed');
