@@ -6,6 +6,7 @@ import { buttonPositiveId } from 'src/app/core/ui/button-positive/const';
 import { SourceViewer } from 'src/app/core/ui/source-viewer/types';
 
 import { bootstrapUrl } from '../../const';
+import { idServicePath } from '../../utilities/utilities-id/const';
 
 @Component({
   selector: 'app-components-button',
@@ -34,6 +35,8 @@ export class ComponentsButtonComponent implements OnInit {
   readonly moduleAnchor = 'module';
   readonly exampleAnchor = 'example';
   readonly conclusionAnchor = 'conclusion';
+  readonly referenceAnchor = 'reference';
+  readonly idServicePath = idServicePath;
 
   constructor() {}
 
