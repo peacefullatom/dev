@@ -1,0 +1,51 @@
+@import '../../../../styles.scss';
+
+.matrix {
+  text-align: center;
+
+  .container {
+    position: relative;
+    display: inline-flex;
+    width: 10rem;
+    height: 10rem;
+
+    .point {
+      position: absolute;
+      display: flex;
+      width: 2rem;
+      height: 1.5rem;
+      background: $success;
+      border-radius: 0.2rem;
+
+      &.left {
+        left: 0;
+      }
+
+      &.top {
+        top: 0;
+      }
+
+      &.right {
+        right: 0;
+      }
+
+      &.bottom {
+        bottom: 0;
+      }
+
+      &.center {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &.middle {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &.center.middle {
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

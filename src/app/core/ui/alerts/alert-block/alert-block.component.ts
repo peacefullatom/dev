@@ -45,9 +45,9 @@ export class AlertBlockComponent implements OnInit {
   }
 
   click() {
-    const { close } = this.settings;
+    const { close, id } = this.settings;
     if (typeof close === 'function') {
-      close(this.settings.id);
+      close(id);
     }
   }
 }

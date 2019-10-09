@@ -42,5 +42,61 @@
   "noteComponentHtml": {
     "path": "src/app/core/ui/note/note.component.html",
     "hash": "ywrphxae"
+  },
+  "alertsComponentHtml": {
+    "path": "src/app/core/ui/alerts/alerts.component.html",
+    "hash": "cp5zjesn"
+  },
+  "alertsComponentScss": {
+    "path": "src/app/core/ui/alerts/alerts.component.scss",
+    "hash": "c83ag1hz"
+  },
+  "alertsComponentTs": {
+    "path": "src/app/core/ui/alerts/alerts.component.ts",
+    "hash": "svnt4b0d"
+  },
+  "alertsModuleTs": {
+    "path": "src/app/core/ui/alerts/alerts.module.ts",
+    "hash": "uy5p89ag"
+  },
+  "alertsConstTs": {
+    "path": "src/app/core/ui/alerts/const.ts",
+    "hash": "ylfgvj1h"
+  },
+  "alertsTypesTs": {
+    "path": "src/app/core/ui/alerts/types.ts",
+    "hash": "8witx5v0"
+  },
+  "appModuleTs": {
+    "path": "src/app/app.module.ts",
+    "hash": "wa9t2yck"
+  },
+  "appComponentTs": {
+    "path": "src/app/app.component.ts",
+    "hash": "o2ub6s4m"
+  },
+  "appComponentHtml": {
+    "path": "src/app/app.component.html",
+    "hash": "20qxfgrv"
+  },
+  "alertBlockComponentHtml": {
+    "path": "src/app/core/ui/alerts/alert-block/alert-block.component.html",
+    "hash": "pany16vt"
+  },
+  "alertBlockComponentScss": {
+    "path": "src/app/core/ui/alerts/alert-block/alert-block.component.scss",
+    "hash": "dy0e9mo6"
+  },
+  "alertBlockComponentTs": {
+    "path": "src/app/core/ui/alerts/alert-block/alert-block.component.ts",
+    "hash": "3x19ytrb"
+  },
+  "alertBlockTypesTs": {
+    "path": "src/app/core/ui/alerts/alert-block/types.ts",
+    "hash": "ngwrq4ac"
+  },
+  "alertServiceTs": {
+    "path": "src/app/core/service/alert.service.ts",
+    "hash": "4mbakiq2"
   }
 }

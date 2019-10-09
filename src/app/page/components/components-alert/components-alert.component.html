@@ -1,1 +1,210 @@
-<p>components-alert works!</p>
+<h4>Alerts</h4>
+<p>
+  Alerts are good friends of user experience. With the help of alerts an
+  application can notify a user about the results of the latest action. This
+  way, a user will always be sure of what he is doing and where it will lead.
+</p>
+<p>So, let me introduce my version of the implementation of the alert.</p>
+<h5>Description</h5>
+<p>
+  To be short, the idea is simple:
+</p>
+<ul>
+  <li>
+    alerts component must be added at the root of the application only once.
+  </li>
+  <li>
+    all dependencies must be added at the root of the application only once.
+  </li>
+  <li>
+    alerts can be summoned anywhere in the application.
+  </li>
+  <li>
+    alerts must have a predefined set of visual appearances.
+  </li>
+</ul>
+<h4>Alerts component</h4>
+<p>With all of the above in mind, I came up with the next solution.</p>
+<p>
+  The base class of the alerts system is a simple container which added to the
+  root of the application.
+</p>
+<p>
+  Here is a source code.
+</p>
+<app-source-viewer [sources]="alertsSources"></app-source-viewer>
+<h6>Template</h6>
+<p>
+  The template applies styles based on vertical and horizontal position
+  variables. Also, it renders an actual list of alert blocks.
+</p>
+<p>
+  I will describe the alert block component later.
+</p>
+<h6>Styles</h6>
+<p>
+  The host component and the alerts container are sharing an almost identical
+  subset of CSS rules.
+</p>
+<p>
+  Both of them have a display property set to flex, fixed position, bound to the
+  start point of a coordinate system, full width and full height and set to
+  ignore any pointer-events.
+</p>
+<p>
+  The root div of the component additionally has padding and a flex-direction
+  property set to a column.
+</p>
+<h6>Component</h6>
+<p>
+  The component is capable to display an alerts queue in any position of the
+  screen described by this matrix.
+</p>
+<div class="matrix">
+  <div class="container">
+    <div class="point left top"></div>
+    <div class="point left middle"></div>
+    <div class="point left bottom"></div>
+    <div class="point center top"></div>
+    <div class="point center middle"></div>
+    <div class="point center bottom"></div>
+    <div class="point right top"></div>
+    <div class="point right middle"></div>
+    <div class="point right bottom"></div>
+  </div>
+</div>
+<p>
+  Upon initialization, the component subscribes to $alert subject of alerts
+  service.
+</p>
+<p>
+  Each time as a new alert data arrives, the component checks the current queue
+  and removes the first element if needed.
+</p>
+<p>
+  After that, it creates a new alert block settings, adds them to queue, and
+  resets the queue fade-out timer.
+</p>
+<p>
+  To display the alert blocks queue in the proper position, the component
+  utilizes two methods verticalPosition and horizontalPosition. Each builds a
+  CSS class name, according to the initial settings.
+</p>
+<p>
+  The rest of the functions are handling various situations, e.g. resetting fade
+  timeout, disabling timeout if the user hovers a mouse over the alert block,
+  and closing an alert upon click.
+</p>
+<h6>Module</h6>
+<p>
+  The most notable parts of the module are the declaration of alert block
+  component and an import of browser animations module.
+</p>
+<h6>Add-ons</h6>
+<p>
+  The add-ons consist of types, interfaces, and constants.
+</p>
+<p>
+  The types are describing the queue position on-screen.
+</p>
+<p>
+  The IAlert interface is used to describe a new alert block.
+</p>
+<p>
+  The constants are defining the maximum queue length, the fade timeout length,
+  and describing states of the queue positioning.
+</p>
+<h4>Alert block component</h4>
+<p>
+  The only purpose of the alert block component is to show some data.
+</p>
+<p>
+  But for higher convenience, this class has several additional functions.
+</p>
+<app-source-viewer [sources]="alertBlockSources"></app-source-viewer>
+<h6>Template</h6>
+<p>
+  The template is a simple div that has animation settings, handles click and
+  displays its contents.
+</p>
+<h6>Styles</h6>
+<p>
+  The most notable CSS definition for the component is the pointer-events
+  settings.
+</p>
+<p>
+  The parent component is designed to be transparent for any pointer-events. And
+  the alert block component must handle mouse hover and click events.
+</p>
+<p>
+  If the user hovers a mouse, then the fade-out timeout of the parent component
+  will be stopped until the mouse will leave all of the alert blocks.
+</p>
+<p>
+  And if the user will click the alert block, then the parent component will
+  remove it from the queue.
+</p>
+<h6>Component</h6>
+<p>
+  The component handles all of the logic described in the above section.
+</p>
+<p>
+  Other things worth to be mentioned are the angular animation instructions and
+  value parsing upon initialization.
+</p>
+<h6>Add-ons</h6>
+<p>
+  The component relies on the IAlertBlock interface which is derived from the
+  IAlert interface.
+</p>
+<h4>Alerts service</h4>
+<p>The alert service allows firing alerts anywhere.</p>
+<app-source-viewer [sources]="alertService"></app-source-viewer>
+<p>
+  The service provides the set of predefined alert types: success, info, alert,
+  error, warning.
+</p>
+<p>
+  But there is always an option to fire a custom alert.
+</p>
+<p>
+  Any of these methods will assign the next value to the $alert subject. Because
+  it is available publicly, it also can be updated manually.
+</p>
+<p>
+  The alerts component is subscribed to the $alert subject and will update its
+  state upon assignment of the next value.
+</p>
+<h4>Implementation</h4>
+<p>And here is the actual implementation in this project.</p>
+<app-source-viewer [sources]="implementationSources"></app-source-viewer>
+<p>
+  The implementation is quite easy.
+</p>
+<p>
+  The alerts block module is imported to the root module of an application.
+</p>
+<p>
+  The root component of an application provides the positioning settings.
+</p>
+<p>
+  And, finally, one must add the alerts component tag into the root template.
+</p>
+<h4>Usage</h4>
+<p>
+  To try the alerts in action just press this button
+  <app-button (click)="showAlert()">alert</app-button>.
+</p>
+<p>
+  An alert with text <cite>alert works</cite> with random style will appear in
+  the right-top corner.
+</p>
+<p>
+  To implement this functionality, inject the AlertService in the constructor.
+</p>
+<app-code>{{ alertsInjectionCode }}</app-code>
+<p>Later invoke an alert this way:</p>
+<app-code>{{ alertsInvocationCode }}</app-code>
+<h5 id="{{ conclusionAnchor }}">Conclusion</h5>
+<h5 id="{{ referenceAnchor }}">Reference</h5>
+<p>This component relies on <a [routerLink]="idServicePath">idService</a>.</p>
