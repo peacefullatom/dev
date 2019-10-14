@@ -39,6 +39,12 @@ export class ComponentsAlertComponent implements OnInit {
   ];
   readonly alertsInjectionCode = `constructor(private readonly alert: AlertService) {}`;
   readonly alertsInvocationCode = `this.alerts.success('You made it!')`;
+  readonly descriptionAnchor = 'description';
+  readonly alertsAnchor = 'alerts';
+  readonly alertBlockAnchor = 'alertBlock';
+  readonly alertsServiceAnchor = 'alertsService';
+  readonly implementationAnchor = 'implementation';
+  readonly usageAnchor = 'usage';
   readonly conclusionAnchor = 'conclusion';
   readonly referenceAnchor = 'reference';
   readonly idServicePath = idServicePath;

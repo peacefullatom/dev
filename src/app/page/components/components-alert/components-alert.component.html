@@ -5,7 +5,7 @@
   way, a user will always be sure of what he is doing and where it will lead.
 </p>
 <p>So, let me introduce my version of the implementation of the alert.</p>
-<h5>Description</h5>
+<h5 id="{{ descriptionAnchor }}">Description</h5>
 <p>
   To be short, the idea is simple:
 </p>
@@ -23,7 +23,7 @@
     alerts must have a predefined set of visual appearances.
   </li>
 </ul>
-<h4>Alerts component</h4>
+<h5 id="{{ alertsAnchor }}">Alerts component</h5>
 <p>With all of the above in mind, I came up with the next solution.</p>
 <p>
   The base class of the alerts system is a simple container which added to the
@@ -114,7 +114,7 @@
   The constants are defining the maximum queue length, the fade timeout length,
   and describing states of the queue positioning.
 </p>
-<h4>Alert block component</h4>
+<h5 id="{{ alertBlockAnchor }}">Alert block component</h5>
 <p>
   The only purpose of the alert block component is to show some data.
 </p>
@@ -157,7 +157,7 @@
   The component relies on the IAlertBlock interface which is derived from the
   IAlert interface.
 </p>
-<h4>Alerts service</h4>
+<h5 id="{{ alertsServiceAnchor }}">Alerts service</h5>
 <p>The alert service allows firing alerts anywhere.</p>
 <app-source-viewer [sources]="alertService"></app-source-viewer>
 <p>
@@ -175,7 +175,7 @@
   The alerts component is subscribed to the $alert subject and will update its
   state upon assignment of the next value.
 </p>
-<h4>Implementation</h4>
+<h5 id="{{ implementationAnchor }}">Implementation</h5>
 <p>And here is the actual implementation in this project.</p>
 <app-source-viewer [sources]="implementationSources"></app-source-viewer>
 <p>
@@ -190,7 +190,7 @@
 <p>
   And, finally, one must add the alerts component tag into the root template.
 </p>
-<h4>Usage</h4>
+<h5 id="{{ usageAnchor }}">Usage</h5>
 <p>
   To try the alerts in action just press this button
   <app-button (click)="showAlert()">alert</app-button>.
@@ -206,5 +206,13 @@
 <p>Later invoke an alert this way:</p>
 <app-code>{{ alertsInvocationCode }}</app-code>
 <h5 id="{{ conclusionAnchor }}">Conclusion</h5>
+<p>
+  This solution fulfills all the demands I've mentioned above.
+</p>
+<p>
+  The solution is implemented in the root of the application. Alerts can be
+  fired from any place of the application. It is possible to fire a predefined
+  alert.
+</p>
 <h5 id="{{ referenceAnchor }}">Reference</h5>
 <p>This component relies on <a [routerLink]="idServicePath">idService</a>.</p>
