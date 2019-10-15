@@ -1,6 +1,7 @@
 import {
   faAngular,
   faBootstrap,
+  faFacebookSquare,
   faFontAwesome,
   faGithub,
   faGitSquare,
@@ -10,12 +11,10 @@ import {
   faSkype,
   faTelegram,
   faTwitter,
-  faYarn
+  faYarn,
 } from '@fortawesome/free-brands-svg-icons';
-import {
-  faEnvelope,
-  faPhoneSquareAlt
-} from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
+
 import { IContactExternalLink, IContactLink } from './types';
 
 export const contactLinks: IContactLink[] = [
@@ -38,6 +37,11 @@ export const contactLinks: IContactLink[] = [
     icon: faLinkedin,
     label: 'Yuriy Markov',
     href: 'https://www.linkedin.com/in/yuriy-markov-797434b3'
+  },
+  {
+    icon: faFacebookSquare,
+    label: 'Yuriy Markov',
+    href: 'https://www.facebook.com/yurij.markov.9'
   },
   {
     icon: faSkype,
