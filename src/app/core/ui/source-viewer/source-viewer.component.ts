@@ -15,7 +15,8 @@ export class SourceViewerComponent implements OnInit, AfterViewInit {
   @Input() sources: SourceViewer = [];
   @ViewChild('data', { static: true }) data: ElementRef<HTMLDivElement>;
 
-  tabs: ISourceViewerTab[] = [];
+  readonly tabs: ISourceViewerTab[] = [];
+  readonly fill = true;
 
   constructor(private readonly idService: IdService) {}
 

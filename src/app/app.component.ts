@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { appRoutes } from './const';
+import { alertsPositionRight, alertsPositionTop } from './core/ui/alerts/const';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { appRoutes } from './const';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '[DEV]';
-  routes = appRoutes;
+  readonly title = '[DEV]';
+  readonly routes = appRoutes;
+  readonly horizontal = alertsPositionRight;
+  readonly vertical = alertsPositionTop;
 }

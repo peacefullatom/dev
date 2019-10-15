@@ -1,4 +1,12 @@
 import {
+  bsAlertDanger,
+  bsAlertDark,
+  bsAlertInfo,
+  bsAlertLight,
+  bsAlertPrimary,
+  bsAlertSecondary,
+  bsAlertSuccess,
+  bsAlertWarning,
   bsBgDanger,
   bsBgDark,
   bsBgInfo,
@@ -104,3 +112,13 @@ export type BsBtn =
   | typeof bsBtnOutlineLight
   | typeof bsBtnOutlineDark
   | typeof bsBtnOutlineLink;
+
+export type BsAlert =
+  | typeof bsAlertPrimary
+  | typeof bsAlertSecondary
+  | typeof bsAlertSuccess
+  | typeof bsAlertDanger
+  | typeof bsAlertWarning
+  | typeof bsAlertInfo
+  | typeof bsAlertLight
+  | typeof bsAlertDark;
