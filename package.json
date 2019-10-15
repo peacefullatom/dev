@@ -10,7 +10,7 @@
     "type": "github",
     "url": "https://github.com/peacefullatom/peacefullatom.github.io.git"
   },
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "concurrently -k \"ng serve\" \"nodemon sources.js\"",
