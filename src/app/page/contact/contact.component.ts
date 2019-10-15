@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faIconSize2x } from 'src/app/core/fa.const';
 
 import { contactExternalLinks, contactLinks } from './const';
+import { IContactLink } from './types';
 
 @Component({
   selector: 'app-contact',
@@ -16,4 +17,8 @@ export class ContactComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  target(link: IContactLink): string {
+    return !!link.href.match(/^http/) ? '_blank' : '';
+  }
 }
