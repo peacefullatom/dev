@@ -1,0 +1,4 @@
+&lt;app-header [routes]="routes"&gt;&lt;/app-header&gt;
+&lt;app-body&gt;&lt;/app-body&gt;
+&lt;app-footer&gt;&lt;/app-footer&gt;
+&lt;app-alerts [vertical]="vertical" [horizontal]="horizontal"&gt;&lt;/app-alerts&gt;

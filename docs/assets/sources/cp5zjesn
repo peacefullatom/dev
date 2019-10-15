@@ -1,0 +1,3 @@
+&lt;div class="content {{verticalPosition()}} {{horizontalPosition()}}"&gt;
+  &lt;app-alert-block *ngFor="let alert of alerts" [settings]="alert"&gt;&lt;/app-alert-block&gt;
+&lt;/div&gt;

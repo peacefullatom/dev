@@ -1,0 +1,3 @@
+&lt;div (click)="click()" class="alert {{settings.type}}" role="alert" [@fadeInOut]&gt;
+  {{settings.value}}
+&lt;/div&gt;
