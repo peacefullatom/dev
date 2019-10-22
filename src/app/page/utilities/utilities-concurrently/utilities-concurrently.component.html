@@ -1,0 +1,73 @@
+<h4>Concurrently</h4>
+<p>
+  The
+  <app-external-link [href]="concurrentlyUrl">concurrently</app-external-link>
+  is a utility which allows you to
+</p>
+<app-blockquote [textAlign]="bsTextAlignCenter"
+  ><p class="mb-0">"Run multiple commands concurrently"</p>
+  <span footer
+    ><app-external-link [href]="concurrentlyReadmeUrl"
+      >concurrently readme</app-external-link
+    >.</span
+  ></app-blockquote
+>
+<p>
+  What else to add? It's a feature-rich utility that boosts your development
+  process! Though, in this article, I will show you the very basics of its
+  usage.
+</p>
+<h5 id="{{ taskAnchor }}">Task</h5>
+<p>
+  I have decided to use this utility because I need to add the actual source
+  code of this project into my static pages.
+</p>
+<p>
+  But, I want any updates of the code to be added automatically without my
+  involvement.
+</p>
+<p>
+  To achieve this goal, I wrote a node.js script, which is running concurrently
+  with angular scripts.
+</p>
+<h5 id="{{ solutionAnchor }}">Solution</h5>
+<p>First of all, add the concurrently utility to the project:</p>
+<app-code>yarn add -D concurrently</app-code>
+<p>Next, modify the package.json. In my case, it looks like this:</p>
+<app-code
+  >"start": "concurrently -k \"ng serve\" \"nodemon sources.js\"",</app-code
+>
+<p>What it does:</p>
+<dl class="row">
+  <dt class="col-sm-3"><code>-k</code></dt>
+  <dd class="col-sm-9">
+    <app-external-link [href]="concurrentlyReadmeUsageUrl"
+      ><cite>kill other processes if one exits or dies</cite></app-external-link
+    >.
+  </dd>
+  <dt class="col-sm-3"><code>ng serve</code></dt>
+  <dd class="col-sm-9">starts angular development server.</dd>
+  <dt class="col-sm-3"><code>nodemon sources.js</code></dt>
+  <dd class="col-sm-9">runs my script upon files update.</dd>
+</dl>
+<p>
+  The output in the console should look like this:
+</p>
+<app-code>{{ outputCode }}</app-code>
+<p>
+  Note, that each task output is prefixed with the task id, e.g.
+  <code>[0]</code>.
+</p>
+<p>
+  Thus, you can understand which thread generated which line in the output for
+  later analysis.
+</p>
+<h5 id="{{ conclusionAnchor }}">Conclusion</h5>
+<p>
+  This utility is extremely useful if you need to run several tasks
+  simultaneously.
+</p>
+<p>
+  This example demonstrates only the tip of the iceberg. This utility can do
+  much more and thus can boost your productivity.
+</p>
