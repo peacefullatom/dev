@@ -12,6 +12,7 @@ import {
 import { AlertService } from 'src/app/core/service/alert.service';
 import { ISourceViewer } from 'src/app/core/ui/source-viewer/types';
 
+import { conclusionAnchor } from '../../const';
 import { idServicePath } from '../../utilities/utilities-id/const';
 
 @Component({
@@ -45,7 +46,7 @@ export class ComponentsAlertComponent implements OnInit {
   readonly alertsServiceAnchor = 'alertsService';
   readonly implementationAnchor = 'implementation';
   readonly usageAnchor = 'usage';
-  readonly conclusionAnchor = 'conclusion';
+  readonly conclusionAnchor = conclusionAnchor;
   readonly referenceAnchor = 'reference';
   readonly idServicePath = idServicePath;
 

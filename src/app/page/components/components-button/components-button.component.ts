@@ -5,7 +5,7 @@ import { faIconSize2x } from 'src/app/core/fa.const';
 import { buttonPositiveId } from 'src/app/core/ui/button-positive/const';
 import { SourceViewer } from 'src/app/core/ui/source-viewer/types';
 
-import { bootstrapUrl } from '../../const';
+import { bootstrapUrl, conclusionAnchor } from '../../const';
 import { idServicePath } from '../../utilities/utilities-id/const';
 
 @Component({
@@ -34,7 +34,7 @@ export class ComponentsButtonComponent implements OnInit {
   readonly componentAnchor = 'component';
   readonly moduleAnchor = 'module';
   readonly exampleAnchor = 'example';
-  readonly conclusionAnchor = 'conclusion';
+  readonly conclusionAnchor = conclusionAnchor;
   readonly referenceAnchor = 'reference';
   readonly idServicePath = idServicePath;
 
