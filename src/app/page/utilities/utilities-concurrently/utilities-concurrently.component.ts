@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { componentsPath, rootPath } from 'src/app/const';
 import { bsTextAlignCenter } from 'src/app/core/bootstrap.const';
 
+import { componentsSourceCodePath } from '../../components/const';
 import { conclusionAnchor } from '../../const';
 
 @Component({
@@ -29,6 +31,11 @@ export class UtilitiesConcurrentlyComponent implements OnInit {
   readonly taskAnchor = 'task';
   readonly solutionAnchor = 'solution';
   readonly conclusionAnchor = conclusionAnchor;
+  readonly componentsSourceCodePath = [
+    rootPath,
+    componentsPath,
+    componentsSourceCodePath
+  ];
 
   constructor() {}
 

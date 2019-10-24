@@ -1,0 +1,16 @@
+<h4>Source viewer</h4>
+<p>
+  This site shows a lot of source code which is running this site.
+</p>
+<p>
+  To achieve this, I'm using a script to generate HTML friendly files from
+  actual sources. Later on, these files are displayed by a component, designed
+  specifically for this task.
+</p>
+<p>
+  To see updates during development I'm using the
+  <a [routerLink]="utilitiesConcurrentlyPath">concurrently</a> utility.
+</p>
+<h5>Description</h5>
+<p>The component combines navigation tabs and code viewer.</p>
+<app-source-viewer [sources]="sourceViewerSources"></app-source-viewer>

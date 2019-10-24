@@ -98,5 +98,29 @@
   "alertServiceTs": {
     "path": "src/app/core/service/alert.service.ts",
     "hash": "4mbakiq2"
+  },
+  "sourceViewerComponentHtml": {
+    "path": "src/app/core/ui/source-viewer/source-viewer.component.html",
+    "hash": "tnmlru8w"
+  },
+  "sourceViewerComponentScss": {
+    "path": "src/app/core/ui/source-viewer/source-viewer.component.scss",
+    "hash": "ny3odqwi"
+  },
+  "sourceViewerComponentTs": {
+    "path": "src/app/core/ui/source-viewer/source-viewer.component.ts",
+    "hash": "536cb2ty"
+  },
+  "sourceViewerModuleTs": {
+    "path": "src/app/core/ui/source-viewer/source-viewer.module.ts",
+    "hash": "ydgi0j7w"
+  },
+  "sourceViewerConstTs": {
+    "path": "src/app/core/ui/source-viewer/const.ts",
+    "hash": "738s60wl"
+  },
+  "sourceViewerTypesTs": {
+    "path": "src/app/core/ui/source-viewer/types.ts",
+    "hash": "hydrivlz"
   }
 }
