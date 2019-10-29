@@ -3,7 +3,7 @@ import { componentsPath, rootPath } from 'src/app/const';
 import { bsTextAlignCenter } from 'src/app/core/bootstrap.const';
 
 import { componentsSourceCodePath } from '../../components/const';
-import { conclusionAnchor } from '../../const';
+import { conclusionAnchor, nodeJsUrl } from '../../const';
 
 @Component({
   selector: 'app-utilities-concurrently',
@@ -36,6 +36,7 @@ export class UtilitiesConcurrentlyComponent implements OnInit {
     componentsPath,
     componentsSourceCodePath
   ];
+  readonly nodeJsUrl = nodeJsUrl;
 
   constructor() {}
 

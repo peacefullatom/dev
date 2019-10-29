@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ISourceViewer } from 'src/app/core/ui/source-viewer/types';
+import { SourceViewer } from 'src/app/core/ui/source-viewer/types';
+
+import { nodeJsUrl } from '../../const';
 
 @Component({
   selector: 'app-utilities-github-pages-helper-script',
@@ -9,7 +11,7 @@ import { ISourceViewer } from 'src/app/core/ui/source-viewer/types';
 export class UtilitiesGithubPagesHelperScriptComponent implements OnInit {
   readonly angularCliGhPagesUrl =
     'https://github.com/angular-schule/angular-cli-ghpages';
-  readonly copySources: ISourceViewer = { id: 'copyJs', active: true };
+  readonly copySources: SourceViewer = { id: 'copyJs', active: true };
   readonly packageJson = `
   ...
   "scripts": {
@@ -22,6 +24,7 @@ export class UtilitiesGithubPagesHelperScriptComponent implements OnInit {
   },
   ...
   `;
+  readonly nodeJsUrl = nodeJsUrl;
 
   constructor() {}
 

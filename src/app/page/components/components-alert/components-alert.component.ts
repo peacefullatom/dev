@@ -10,7 +10,7 @@ import {
   bsAlertWarning,
 } from 'src/app/core/bootstrap.const';
 import { AlertService } from 'src/app/core/service/alert.service';
-import { ISourceViewer } from 'src/app/core/ui/source-viewer/types';
+import { SourceViewer } from 'src/app/core/ui/source-viewer/types';
 
 import { conclusionAnchor } from '../../const';
 import { idServicePath } from '../../utilities/utilities-id/const';
@@ -21,19 +21,19 @@ import { idServicePath } from '../../utilities/utilities-id/const';
   styleUrls: ['./components-alert.component.scss']
 })
 export class ComponentsAlertComponent implements OnInit {
-  readonly alertsSources: ISourceViewer[] = [
+  readonly alertsSources: SourceViewer = [
     { component: 'alerts', active: true },
     { id: 'alertsConstTs' },
     { id: 'alertsTypesTs' }
   ];
-  readonly alertBlockSources: ISourceViewer[] = [
+  readonly alertBlockSources: SourceViewer = [
     { template: 'alertBlock', active: true },
     { style: 'alertBlock' },
     { singleComponent: 'alertBlock' },
     { id: 'alertBlockTypesTs' }
   ];
-  readonly alertService: ISourceViewer[] = [{ service: 'alert', active: true }];
-  readonly implementationSources: ISourceViewer[] = [
+  readonly alertService: SourceViewer = { service: 'alert', active: true };
+  readonly implementationSources: SourceViewer = [
     { template: 'app', active: true },
     { singleComponent: 'app' },
     { module: 'app' }

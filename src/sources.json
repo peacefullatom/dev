@@ -122,5 +122,9 @@
   "sourceViewerTypesTs": {
     "path": "src/app/core/ui/source-viewer/types.ts",
     "hash": "hydrivlz"
+  },
+  "sourcesJs": {
+    "path": "sources.js",
+    "hash": "43vm6tgf"
   }
 }
