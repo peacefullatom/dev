@@ -1,0 +1,12 @@
+&lt;app-tabs [tabs]="tabs" [fill]="fill" [id]="id"&gt;&lt;/app-tabs&gt;
+&lt;div class="carousel" id="{{ id }}"&gt;
+  &lt;div class="carousel-inner"&gt;
+    &lt;div
+      [ngClass]="{ active: tab.active }"
+      *ngFor="let tab of tabs"
+      class="carousel-item"
+    &gt;
+      &lt;app-code [html]="tab.source"&gt;&lt;/app-code&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
