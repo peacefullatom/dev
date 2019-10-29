@@ -24,12 +24,19 @@
   <strong>404.html</strong> after project compilation is over.
 </p>
 <h5>Solution</h5>
-<p>Create a script for node.js, which will perform the routine.</p>
+<p>
+  Create a script for
+  <app-external-link [href]="nodeJsUrl">node.js</app-external-link>, which will
+  perform the routine.
+</p>
 <p>Here is the script:</p>
 <app-source-viewer [sources]="copySources"></app-source-viewer>
 <p>It is, indeed, simple.</p>
 <h5>Explanation</h5>
-<p>This script is running in the node.js environment.</p>
+<p>
+  This script is running in the
+  <app-external-link [href]="nodeJsUrl">node.js</app-external-link> environment.
+</p>
 <p>
   To start the script automatically, I have modified the package.json file. Here
   is an excerpt:
@@ -37,7 +44,8 @@
 <app-code [value]="packageJson"></app-code>
 <p>
   Note the <strong>"build"</strong> parameter - it starts the script. Value of
-  this parameter instructs node.js to run <strong>ng build</strong> and after
-  that run <strong>copy.js</strong>.
+  this parameter instructs
+  <app-external-link [href]="nodeJsUrl">node.js</app-external-link> to run
+  <strong>ng build</strong> and after that run <strong>copy.js</strong>.
 </p>
 <p>The script will output the success or error message after it finishes.</p>

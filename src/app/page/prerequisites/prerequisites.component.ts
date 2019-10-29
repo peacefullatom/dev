@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
 import { gitCliPath, parentPath, vsCodeExtensionsPath } from 'src/app/const';
 
-import { codeUrl, gitGuiUrl, gitUrl } from '../const';
+import { angularUrl, bootstrapUrl, codeUrl, gitGuiUrl, gitUrl, nodeJsUrl } from '../const';
 import { gitAnchor } from './const';
 
 @Component({
@@ -12,7 +12,7 @@ import { gitAnchor } from './const';
 })
 export class PrerequisitesComponent implements OnInit {
   nodeJsAnchor = 'NodeJs';
-  nodeJsUrl = 'https://nodejs.org';
+  nodeJsUrl = nodeJsUrl;
   yarnAnchor = 'Yarn';
   yarnUrl = 'https://yarnpkg.com/';
   ideAnchor = 'IDE';
@@ -27,9 +27,9 @@ export class PrerequisitesComponent implements OnInit {
   gitUrl = gitUrl;
   gitGuiUrl = gitGuiUrl;
   angularAnchor = 'Angular';
-  angularUrl = 'https://angular.io';
+  angularUrl = angularUrl;
   bootstrapAnchor = 'Bootstrap';
-  bootstrapUrl = 'https://getbootstrap.com/';
+  bootstrapUrl = bootstrapUrl;
   fontAwesomeAnchor = 'FontAwesome';
   fontAwesomeUrl = 'https://fontawesome.com/';
   fontAwesomeIconsUrl = 'https://fontawesome.com/icons';

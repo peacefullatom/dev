@@ -15,6 +15,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons';
 
+import { angularUrl, bootstrapUrl } from '../const';
 import { IContactExternalLink, IContactLink } from './types';
 
 export const contactLinks: IContactLink[] = [
@@ -66,11 +67,8 @@ export const contactLinks: IContactLink[] = [
 ];
 
 export const contactExternalLinks: IContactExternalLink[] = [
-  { icon: faAngular, href: 'https://angular.io/' },
-  {
-    icon: faBootstrap,
-    href: 'https://getbootstrap.com/'
-  },
+  { icon: faAngular, href: angularUrl },
+  { icon: faBootstrap, href: bootstrapUrl },
   { icon: faGitSquare, href: 'https://git-scm.com/' },
   { icon: faSass, href: 'https://sass-lang.com/' },
   { icon: faYarn, href: 'https://yarnpkg.com/' },

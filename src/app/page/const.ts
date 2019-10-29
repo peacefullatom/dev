@@ -6,6 +6,10 @@ export const gitUrl = 'https://git-scm.com/';
 export const gitGuiUrl = 'https://git-scm.com/downloads/guis';
 /** url to bootstrap */
 export const bootstrapUrl = 'https://getbootstrap.com/';
+/** url to node.js */
+export const nodeJsUrl = 'https://nodejs.org';
+/** url to angular.io */
+export const angularUrl = 'https://angular.io';
 
 // common anchors section
 /** conclusion anchor */

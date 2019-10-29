@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ISourceViewer } from 'src/app/core/ui/source-viewer/types';
+import { SourceViewer } from 'src/app/core/ui/source-viewer/types';
+
 import { conclusionAnchor } from '../../const';
 
 @Component({
@@ -8,11 +9,11 @@ import { conclusionAnchor } from '../../const';
   styleUrls: ['./utilities-id.component.scss']
 })
 export class UtilitiesIdComponent implements OnInit {
-  readonly idServiceSources: ISourceViewer[] = [
+  readonly idServiceSources: SourceViewer = [
     { service: 'id', active: true },
     { id: 'idServiceConstTs' }
   ];
-  readonly noteSources: ISourceViewer[] = [
+  readonly noteSources: SourceViewer = [
     { singleComponent: 'note', active: true },
     { template: 'note' }
   ];

@@ -48,7 +48,6 @@ if (sources) {
     // getting source data
     const source = sources[sourceId];
     // progress output
-    // console.log(`processing ${index + 1} of ${keys.length} files`);
     progress(index + 1, keys.length);
     // set hash
     if (!source.hash) {
@@ -69,5 +68,5 @@ if (sources) {
   fse.writeFileSync(sourcesPath, JSON.stringify(sources, null, 2));
 } else {
   // warn if list is empty
-  console.log('failed to obtain a list of sources.');
+  console.warn('failed to obtain a list of sources.');
 }
