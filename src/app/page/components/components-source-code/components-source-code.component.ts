@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { rootPath, utilitiesPath } from 'src/app/const';
+import { componentsPath, rootPath, utilitiesPath } from 'src/app/const';
 import { SourceViewer } from 'src/app/core/ui/source-viewer/types';
 
 import { angularUrl, bootstrapUrl, conclusionAnchor, nodeJsUrl } from '../../const';
 import { utilitiesConcurrentlyPath } from '../../utilities/const';
 import { idServicePath } from '../../utilities/utilities-id/const';
+import { componentsTabsPath } from '../const';
 
 @Component({
   selector: 'app-components-source-code',
@@ -17,6 +18,7 @@ export class ComponentsSourceCodeComponent implements OnInit {
     utilitiesPath,
     utilitiesConcurrentlyPath
   ];
+  readonly componentsTabsPath = [rootPath, componentsPath, componentsTabsPath];
   readonly sourceViewerSources: SourceViewer = [
     { component: 'sourceViewer', active: true },
     { id: 'sourceViewerConstTs' },

@@ -4,6 +4,7 @@ import { IRoute } from 'src/app/types';
 export const componentsIntroPath = 'intro';
 export const componentsButtonPath = 'button';
 export const componentsAlertPath = 'alert';
+export const componentsTabsPath = 'tabs';
 export const componentsSourceCodePath = 'source-code';
 
 export const componentsChildrenRoutes: IRoute[] = [
@@ -34,6 +35,14 @@ export const componentsChildrenRoutes: IRoute[] = [
     loadChildren: () =>
       import('./components-alert/components-alert.module').then(
         m => m.ComponentsAlertModule
+      )
+  },
+  {
+    path: componentsTabsPath,
+    data: { label: 'Tabs' },
+    loadChildren: () =>
+      import('./components-tabs/components-tabs.module').then(
+        m => m.ComponentsTabsModule
       )
   },
   {
