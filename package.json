@@ -13,6 +13,7 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "start": "concurrently -k \"ng serve\" \"nodemon sources.js\"",
     "build": "node sources.js && ng build --prod && node copy.js",
     "test": "ng test",
