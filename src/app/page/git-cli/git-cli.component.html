@@ -6,19 +6,17 @@
 </p>
 <p>
   There are plenty of ways of using git. As I mentioned in the
-  <a [routerLink]="prerequisitesPath" fragment="{{ gitAnchor }}"
-    >prerequisites</a
-  >
+  <a [fragment]="gitAnchor" [routerLink]="prerequisitesPath">prerequisites</a>
   section, there is a set of
   <app-external-link [href]="gitGuiUrl">GUI software</app-external-link>.
 </p>
 <p>But I prefer to use git from command-line.</p>
 <p>So, here are some of the commands I'm using daily.</p>
-<h5 id="{{ initAnchor }}">init</h5>
+<h5 [id]="initAnchor">init</h5>
 <p>If you need to initialize a new repository run this command:</p>
 <app-code>git init</app-code>
 <p>That's all! Now you have the initialized repo. Make your first commit.</p>
-<h5 id="{{ pullAnchor }}">pull</h5>
+<h5 [id]="pullAnchor">pull</h5>
 <p>
   If you are working as a part of a team, or if you are working from different
   workstations, you need to keep your local repo up to date.
@@ -31,7 +29,7 @@
   After running this command, don't forget to check if there are any merging
   conflicts.
 </p>
-<h5 id="{{ branchAnchor }}">branch</h5>
+<h5 [id]="branchAnchor">branch</h5>
 <p>
   There can be several branches in a repository.
 </p>
@@ -50,14 +48,14 @@
 <p>If you want to remove local branch type this command:</p>
 <app-code>git branch <b>-d</b>&nbsp;<i>branch_name</i></app-code>
 <p>Don't forget that the branch will remain on a remote server.</p>
-<h5 id="{{ checkoutAnchor }}">checkout</h5>
+<h5 [id]="checkoutAnchor">checkout</h5>
 <p>To switch to another branch issue the next command:</p>
 <app-code>git checkout <i>branch_name</i></app-code>
 <p>
   If you want to create a new branch and switch to it, add <b>-b</b> option:
 </p>
 <app-code>git checkout <b>-b</b>&nbsp;<i>branch_name</i></app-code>
-<h5 id="{{ addAnchor }}">add</h5>
+<h5 [id]="addAnchor">add</h5>
 <p>
   After you have finished your work, you need to stage files. To add all files
   at once use this command:
@@ -69,7 +67,7 @@
   >Note that path_spec can be a single file name, a path to a directory, and
   also it supports wildcards.</app-note
 >
-<h5 id="{{ commitAnchor }}">commit</h5>
+<h5 [id]="commitAnchor">commit</h5>
 <p>
   Once you have staged files, you can commit them to the remote repository. One
   option is to use the abilities of your IDE. But you can file the next command:
@@ -85,7 +83,7 @@
   syntax:
 </p>
 <app-code>git commit <b>-m</b> "<i>your_comment_here</i>"</app-code>
-<h5 id="{{ mergeAnchor }}">merge</h5>
+<h5 [id]="mergeAnchor">merge</h5>
 <p>Merging branches can be done as follows:</p>
 <app-code>git merge <i>branch_name</i></app-code>
 <p>Don't forget to check for conflicts and fix them if they arise.</p>
@@ -93,7 +91,7 @@
   It is also a good practice to merge branches via pull requests instead of
   doing this directly.
 </p>
-<h5 id="{{ pushAnchor }}">push</h5>
+<h5 [id]="pushAnchor">push</h5>
 <p>Pushing your changes to a remote repository is done like this:</p>
 <app-code>git push</app-code>
 <p>
@@ -105,13 +103,13 @@
   This command will create a new branch in a remote repository and push your
   changes.
 </p>
-<h5 id="{{ helpAnchor }}">help</h5>
+<h5 [id]="helpAnchor">help</h5>
 <p>
   If you stuck at some point, you can always read the git manual. To ask git for
   help type:
 </p>
 <app-code>git <i>command</i>&nbsp;<b>--help</b></app-code>
-<h5 id="{{ summaryAnchor }}">summary</h5>
+<h5 [id]="summaryAnchor">summary</h5>
 <p>
   There are a lot of abilities of git which are not covered by this article. But
   this is the minimal set for everyday usage.

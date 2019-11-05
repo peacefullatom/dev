@@ -22,7 +22,7 @@ export class UtilitiesIdComponent implements OnInit {
   readonly initializationCode = `ngOnInit() {
   this.id = this.id || this.idService.nextId();
 }`;
-  readonly templateCode = `<div class="card {{ type }} mb-3" id="{{ id }}"></div>`;
+  readonly templateCode = `<div class="card {{ type }} mb-3" [id]="id"></div>`;
   readonly customIdCode = `<app-note [id]="'customId'">Follow the KISS rule!</app-note>`;
   readonly implementationAnchor = 'implementation';
   readonly conclusionAnchor = conclusionAnchor;

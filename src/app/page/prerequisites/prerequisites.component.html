@@ -5,14 +5,14 @@
 <p>Please, note that the order of the list is also important.</p>
 <p>For example, Yarn will not work without NPM, etc.</p>
 <p>Ok let's get started</p>
-<h5 id="{{ nodeJsAnchor }}">
+<h5 [id]="nodeJsAnchor">
   <app-external-link [href]="nodeJsUrl">Node.js</app-external-link>
 </h5>
 <p>
   The Node.js provides a powerful V8 JavaScript engine, a package manager (aka
   NPM), server-side JavaScript runtime environment, etc.
 </p>
-<h5 id="{{ yarnAnchor }}">
+<h5 [id]="yarnAnchor">
   <app-external-link [href]="yarnUrl">Yarn</app-external-link>
 </h5>
 <p>The Yarn package manager is a superset for an NPM.</p>
@@ -22,7 +22,7 @@
   Secondly, Yarn will recreate all of the dependencies you use in your project
   with the same version on any remote workstation.
 </p>
-<h5 id="{{ ideAnchor }}">IDE</h5>
+<h5 [id]="ideAnchor">IDE</h5>
 <p>You may use any IDE which fits you the most.</p>
 <p>
   Here are some of them
@@ -42,7 +42,7 @@
   <a [routerLink]="vsCodeExtensionsPath">list</a> of extensions I'm using daily
   to be more productive.
 </p>
-<h5 id="{{ gitAnchor }}">
+<h5 [id]="gitAnchor">
   <app-external-link [href]="gitUrl">Git</app-external-link>
 </h5>
 <p>Git is a powerful yet flexible, still easy to use version control system.</p>
@@ -61,7 +61,7 @@
   <a [routerLink]="gitCliPath">list</a>
   of commands which I'm using daily.
 </p>
-<h5 id="{{ angularAnchor }}">
+<h5 [id]="angularAnchor">
   <app-external-link [href]="angularUrl">Angular</app-external-link>
 </h5>
 <p>To start a new Angular project follow these steps.</p>
@@ -91,7 +91,7 @@
 <app-code>ng serve --open</app-code>
 <p>To get a list of available commands run the following:</p>
 <app-code>ng help</app-code>
-<h5 id="{{ bootstrapAnchor }}">
+<h5 [id]="bootstrapAnchor">
   <app-external-link [href]="bootstrapUrl">Bootstrap</app-external-link>
 </h5>
 <p>To build applications fast, one should use CSS component library.</p>
@@ -103,7 +103,7 @@
 <app-code>npm install bootstrap</app-code>
 <p>Or via Yarn:</p>
 <app-code>yarn add bootstrap</app-code>
-<h5 id="{{ fontAwesomeAnchor }}">
+<h5 [id]="fontAwesomeAnchor">
   <app-external-link [href]="fontAwesomeUrl">Font Awesome</app-external-link>
 </h5>
 <p>

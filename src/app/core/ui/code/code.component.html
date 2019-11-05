@@ -1,9 +1,9 @@
 <pre
+  [class]="className"
+  [id]="id"
   [ngClass]="{ hide: content }"
-  class="{{ className }}"
-  id="{{ id }}"
 ><code><ng-content></ng-content></code></pre>
 <pre
+  [class]="className"
   [ngClass]="{ hide: !content }"
-  class="{{ className }}"
 ><code #code>{{render()}}</code></pre>

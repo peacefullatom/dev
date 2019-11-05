@@ -9,7 +9,7 @@
   To simplify such a routine task, I'm using the next solution:
 </p>
 <app-source-viewer [sources]="idServiceSources"></app-source-viewer>
-<h5 id="{{ implementationAnchor }}">Implementation</h5>
+<h5 [id]="implementationAnchor">Implementation</h5>
 <p>Here is an example:</p>
 <app-source-viewer [sources]="noteSources"></app-source-viewer>
 <p>
@@ -32,7 +32,7 @@
   Also, this approach allows defining a custom <code>id</code> in a template:
 </p>
 <app-code>{{ customIdCode }}</app-code>
-<h5 id="{{ conclusionAnchor }}">Conclusion</h5>
+<h5 [id]="conclusionAnchor">Conclusion</h5>
 <p>
   <code>Ids</code> allow you debug your code and layout. Automatically generated
   <code>ids</code> are a good solution. Having an ability to define custom
