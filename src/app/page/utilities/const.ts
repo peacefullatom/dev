@@ -17,7 +17,7 @@ export const utilitiesChildrenRoutes: IRoute[] = [
     path: utilitiesIntroPath,
     data: { label: 'Intro' },
     loadChildren: () =>
-      import('./utilities-into/utilities-into.module').then(
+      import('./utilities-intro/utilities-intro.module').then(
         m => m.UtilitiesIntoModule
       )
   },
