@@ -1,0 +1,5 @@
+@import '../../../../global.scss';
+
+.nav-item.nav-link {
+  white-space: nowrap;
+}

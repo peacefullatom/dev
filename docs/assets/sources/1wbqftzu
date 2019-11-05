@@ -1,0 +1,16 @@
+&lt;ul
+  [ngClass]="{ 'nav-justified flex-column flex-sm-row': fill }"
+  class="nav nav-tabs"
+  id="{{ id }}"
+&gt;
+  &lt;li *ngFor="let tab of tabs" class="nav-item"&gt;
+    &lt;a
+      (click)="handleClick($event, tab)"
+      [ngClass]="{ active: tab.active }"
+      [routerLink]="tab.path"
+      [routerLinkActive]="active"
+      class="nav-item nav-link"
+      &gt;{{ tab.title }}&lt;/a
+    &gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
