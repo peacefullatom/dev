@@ -126,5 +126,29 @@
   "sourcesJs": {
     "path": "sources.js",
     "hash": "43vm6tgf"
+  },
+  "tabsComponentHtml": {
+    "path": "src/app/core/ui/tabs/tabs.component.html",
+    "hash": "1wbqftzu"
+  },
+  "tabsComponentScss": {
+    "path": "src/app/core/ui/tabs/tabs.component.scss",
+    "hash": "kq846fi5"
+  },
+  "tabsComponentTs": {
+    "path": "src/app/core/ui/tabs/tabs.component.ts",
+    "hash": "dqbzj09p"
+  },
+  "tabsModuleTs": {
+    "path": "src/app/core/ui/tabs/tabs.module.ts",
+    "hash": "6p5kznec"
+  },
+  "tabsConstTs": {
+    "path": "src/app/core/ui/tabs/const.ts",
+    "hash": "qolejxfk"
+  },
+  "tabsTypesTs": {
+    "path": "src/app/core/ui/tabs/types.ts",
+    "hash": "5gnt6vl4"
   }
 }
