@@ -23,6 +23,8 @@ export const gitCliPath = 'git-cli';
 export const utilitiesPath = 'utilities';
 /** path to the components section */
 export const componentsPath = 'components';
+/** path to the misc section */
+export const miscPath = 'misc';
 
 /** the default route definition */
 export const defaultRoute: IRoute = {
@@ -89,6 +91,12 @@ export const appRoutes: IRoute[] = [
       import('./page/components/components.module').then(
         m => m.ComponentsModule
       )
+  },
+  {
+    path: miscPath,
+    data: { label: 'Misc' },
+    loadChildren: () =>
+      import('./page/misc/misc.module').then(m => m.MiscModule)
   },
   contactRoute,
   { path: emptyPath, redirectTo: introPath, pathMatch: 'full', skip: true },
