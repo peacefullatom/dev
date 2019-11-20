@@ -4,5 +4,8 @@
     <a [routerLink]="contact.path" [routerLinkActive]="active">{{
       contact.data.label
     }}</a>
+    <a [href]="devUrl">
+      <fa-icon [icon]="faDev" [title]="devTitle"></fa-icon>
+    </a>
   </div>
 </div>
