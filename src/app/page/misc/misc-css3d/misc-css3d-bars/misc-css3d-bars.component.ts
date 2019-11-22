@@ -22,6 +22,7 @@ export class MiscCss3dBarsComponent implements OnInit {
   @Input() depth = 100;
   @Input() bars = 5;
   @Input() hue = 0;
+  @Input() flat = false;
 
   get facesCount(): number {
     return Array.apply(null, { length: css3dFacesCount * this.bars }).map(Number.call, Number);
@@ -99,7 +100,6 @@ export class MiscCss3dBarsComponent implements OnInit {
       case css3dFaceBottom:
         return `rotateX(-90deg) translate3d(${0}px, ${0}px, ${nHeight + this.barHeightStep - nSizeY}px)`;
     }
-    return '';
   }
 
   private normalizeOrder(value: number): Css3dFace {

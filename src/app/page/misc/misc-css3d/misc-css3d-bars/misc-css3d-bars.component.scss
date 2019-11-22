@@ -1,3 +1,16 @@
+.container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .plane {
+    transform: rotate3d(1, 1, 1, 45deg);
+    animation: rotate 6s linear infinite;
+  }
+}
+
 @keyframes rotate {
   from {
     transform: rotate3d(1, 1, 1, 0deg);
