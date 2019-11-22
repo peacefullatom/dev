@@ -1,0 +1,37 @@
+<h4>CSS 3D</h4>
+<p>
+  As a frontend developer, I'm working a lot with CSS.
+</p>
+<p>
+  From time to time, I'm experimenting with CSS just for fun.
+</p>
+<p>
+  Recently I've found an article about 3D transforms in CSS, which gave ideas for new experiments.
+</p>
+<p>To be short, I've finished up with the idea to build an interactive 3D object.</p>
+<p>The original article is here <app-external-link [href]="rotate3dUrl">rotate 3d</app-external-link>.</p>
+<h5>Demo</h5>
+<p>This simple demo allows changing some parameters of the object: width, height, depth, number of bars.</p>
+<app-misc-css3d-bars [hue]="hue" [bars]="bars" [depth]="depth" [height]="height" [width]="width"></app-misc-css3d-bars>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mb-3">
+      <span class="btn">Bars count:</span>
+      <app-stepper [(value)]="bars" [settings]="barsSettings"></app-stepper>
+    </div>
+    <div class="col mb-3">
+      <span class="btn">Depth:</span>
+      <app-stepper [(value)]="depth" [settings]="depthSettings"></app-stepper>
+    </div>
+    <div class="col mb-3">
+      <span class="btn">Width:</span>
+      <app-stepper [(value)]="width" [settings]="sizeSettings"></app-stepper>
+    </div>
+    <div class="col mb-3">
+      <span class="btn">Height:</span>
+      <app-stepper [(value)]="height" [settings]="sizeSettings"></app-stepper>
+    </div>
+  </div>
+</div>
+<h5>Component</h5>
+<app-source-viewer [sources]="miscCss3dBarsSources"></app-source-viewer>

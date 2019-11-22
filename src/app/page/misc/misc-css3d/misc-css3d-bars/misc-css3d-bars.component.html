@@ -1,0 +1,34 @@
+<div
+  [ngStyle]="{
+    width: '100%',
+    height: '300px',
+    display: 'flex',
+    'justify-content': 'center',
+    'align-items': 'center'
+  }"
+>
+  <div
+    [ngStyle]="{
+      width: size(planeWidth),
+      height: size(planeHeight),
+      'transform-style': 'preserve-3d',
+      transform: 'rotate3d(1, 1, 1, 45deg)',
+      animation: 'rotate 6s linear infinite'
+    }"
+  >
+    <div
+      [ngStyle]="{
+        background: background,
+        display: 'flex',
+        'align-items': 'center',
+        'justify-content': 'center',
+        position: 'absolute',
+        overflow: 'hidden',
+        width: size(faceWidth(face)),
+        height: size(faceHeight(face)),
+        transform: transform(face)
+      }"
+      *ngFor="let face of facesCount"
+    ></div>
+  </div>
+</div>
