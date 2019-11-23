@@ -1,4 +1,4 @@
-&lt;div class="card {{ type }} mb-3" id="{{ id }}"&gt;
+&lt;div [id]="id" class="card {{ type }} mb-3"&gt;
   &lt;div *ngIf="header" class="card-header"&gt;{{ header }}&lt;/div&gt;
   &lt;div class="card-body"&gt;
     &lt;h5 *ngIf="title" class="card-title"&gt;{{ title }}&lt;/h5&gt;
