@@ -1,0 +1,9 @@
+<div [title]="value" class="btn-group">
+  <button (click)="decrement()" [title]="decrementTitle" class="btn btn-primary">
+    <fa-icon [icon]="faMinus"></fa-icon>
+  </button>
+  <input [value]="value" class="form-control" disabled type="text" />
+  <button (click)="increment()" [title]="incrementTitle" class="btn btn-primary">
+    <fa-icon [icon]="faPlus"></fa-icon>
+  </button>
+</div>

@@ -1,8 +1,8 @@
 import { emptyPath } from 'src/app/const';
 import { IRoute } from 'src/app/types';
 
-import { UtilitiesIntoComponent } from './utilities-into.component';
+import { UtilitiesIntroComponent } from './utilities-intro.component';
 
 export const utilitiesIntroComponentRoutes: IRoute[] = [
-  { path: emptyPath, component: UtilitiesIntoComponent }
+  { path: emptyPath, component: UtilitiesIntroComponent }
 ];

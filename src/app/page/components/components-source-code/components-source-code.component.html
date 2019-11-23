@@ -11,7 +11,7 @@
   To see updates during development I'm using the
   <a [routerLink]="utilitiesConcurrentlyPath">concurrently</a> utility.
 </p>
-<h5 id="{{ descriptionAnchor }}">Description</h5>
+<h5 [id]="descriptionAnchor">Description</h5>
 <p>
   The component combines navigation
   <a [routerLink]="componentsTabsPath">tabs</a> and code viewer and leverages
@@ -21,7 +21,7 @@
 </p>
 <p>Here are the sources of the component:</p>
 <app-source-viewer [sources]="sourceViewerSources"></app-source-viewer>
-<h5 id="{{ sourcesAnchor }}">Sources</h5>
+<h5 [id]="sourcesAnchor">Sources</h5>
 <p>
   The component relies on data stored in the JSON file named
   <code>sources.json</code>.
@@ -63,7 +63,7 @@
   Hash-names are used to avoid name collision. Thus, it is possible to include
   files with a similar name.
 </p>
-<h5 id="{{ processingAnchor }}">Processing</h5>
+<h5 [id]="processingAnchor">Processing</h5>
 <p>
   Files listed in the <code>sources.json</code> are processed by
   <code>sources.js</code> script, which works in
@@ -126,7 +126,7 @@
   >Additional data modifications can be applied during file processing. For
   example, keyword coloration or syntax highlight.</app-note
 >
-<h5 id="{{ renderingAnchor }}">Rendering</h5>
+<h5 [id]="renderingAnchor">Rendering</h5>
 <p>
   To render the source files, I'm defining the settings via
   <code>SourceViewer</code> type.
@@ -173,7 +173,7 @@
   be used as follows:
 </p>
 <app-code>{{ sourceViewerImplementationCode }}</app-code>
-<h5 id="{{ conclusionAnchor }}">Conclusion</h5>
+<h5 [id]="conclusionAnchor">Conclusion</h5>
 <p>
   The source viewer component consists of three parts:
 </p>

@@ -6,10 +6,7 @@
 <div class="row">
   <div class="col">
     <p *ngFor="let link of links">
-      <a
-        href="{{ link.href }}"
-        rel="noopener noreferrer"
-        target="{{ target(link) }}"
+      <a [href]="link.href" [target]="target(link)" rel="noopener noreferrer"
         ><fa-icon
           [fixedWidth]="true"
           [icon]="link.icon"
@@ -28,10 +25,10 @@
 <div class="row">
   <div class="col">
     <a
+      [href]="link.href"
+      [rel]="'noopener noreferrer'"
+      [target]="'_blank'"
       *ngFor="let link of externalLinks"
-      href="{{ link.href }}"
-      rel="noopener noreferrer"
-      target="_blank"
       ><fa-icon
         [fixedWidth]="true"
         [icon]="link.icon"

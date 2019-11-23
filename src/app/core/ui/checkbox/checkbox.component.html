@@ -1,0 +1,4 @@
+<div [id]="id" [ngClass]="{ disabled: disabled }" class="custom-control custom-checkbox">
+  <input (change)="handleClick()" [checked]="active" [id]="checkboxId" class="custom-control-input" type="checkbox" />
+  <label [for]="checkboxId" class="custom-control-label">{{ title }}</label>
+</div>

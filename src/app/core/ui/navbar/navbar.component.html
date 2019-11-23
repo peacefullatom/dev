@@ -1,4 +1,5 @@
 <nav
+  [id]="id"
   [ngClass]="{
     'navbar-dark': bgDark,
     'navbar-light': !bgDark,
@@ -7,15 +8,14 @@
   }"
   #host
   class="navbar navbar-expand-lg {{ bg }}"
-  id="{{ id }}"
 >
-  <a *ngIf="brand" [routerLink]="brand.path" class="navbar-brand">
+  <a [routerLink]="brand.path" *ngIf="brand" class="navbar-brand">
     {{ brand.data.label }}
   </a>
   <span
+    [ngClass]="{ 'text-dark': !bgDark, 'text-light': bgDark }"
     *ngIf="text"
     class="navbar-text"
-    [ngClass]="{ 'text-dark': !bgDark, 'text-light': bgDark }"
   >
     {{ text }}
   </span>

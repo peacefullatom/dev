@@ -1,4 +1,4 @@
-<blockquote class="blockquote {{ textAlign }}" id="{{ id }}">
+<blockquote [id]="id" class="blockquote {{ textAlign }}">
   <ng-content></ng-content>
   <footer [ngClass]="{ show: showFooter() }" class="blockquote-footer" #footer>
     <ng-content select="[footer]"></ng-content>

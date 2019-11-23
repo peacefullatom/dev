@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FooterComponent } from './footer.component';
 
@@ -8,6 +9,6 @@ import { FooterComponent } from './footer.component';
 @NgModule({
   declarations: [FooterComponent],
   exports: [FooterComponent],
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule, FontAwesomeModule]
 })
 export class FooterModule {}

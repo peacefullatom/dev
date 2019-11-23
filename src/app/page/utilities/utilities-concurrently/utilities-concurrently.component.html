@@ -17,7 +17,7 @@
   process! Though, in this article, I will show you the very basics of its
   usage.
 </p>
-<h5 id="{{ taskAnchor }}">Task</h5>
+<h5 [id]="taskAnchor">Task</h5>
 <p>
   I have decided to use this utility because I want to display the actual
   <a [routerLink]="componentsSourceCodePath">source code</a> of this project.
@@ -31,7 +31,7 @@
   <app-external-link [href]="nodeJsUrl">node.js</app-external-link> script,
   which is running concurrently with angular scripts.
 </p>
-<h5 id="{{ solutionAnchor }}">Solution</h5>
+<h5 [id]="solutionAnchor">Solution</h5>
 <p>First of all, add the concurrently utility to the project:</p>
 <app-code>yarn add -D concurrently</app-code>
 <p>Next, modify the package.json. In my case, it looks like this:</p>
@@ -63,7 +63,7 @@
   Thus, you can understand which thread generated which line in the output for
   later analysis.
 </p>
-<h5 id="{{ conclusionAnchor }}">Conclusion</h5>
+<h5 [id]="conclusionAnchor">Conclusion</h5>
 <p>
   This utility is extremely useful if you need to run several tasks
   simultaneously.
