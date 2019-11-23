@@ -7,3 +7,12 @@ export type Css3dFace =
   | typeof css3dFaceLeft
   | typeof css3dFaceTop
   | typeof css3dFaceBottom;
+
+export interface IMiscCss3dBarsSettings {
+  width: number;
+  height: number;
+  depth: number;
+  bars: number;
+  hue: number;
+  mode3d: boolean;
+}

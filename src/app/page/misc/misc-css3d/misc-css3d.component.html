@@ -10,32 +10,86 @@
 </p>
 <p>To be short, I've finished up with the idea to build an interactive 3D object.</p>
 <p>The original article is here <app-external-link [href]="rotate3dUrl">rotate 3d</app-external-link>.</p>
-<h5>Demo</h5>
+<h5 [id]="demoAnchor">Demo</h5>
 <p>This simple demo allows changing some parameters of the object: width, height, depth, number of bars.</p>
-<app-misc-css3d-bars [hue]="hue" [bars]="bars" [depth]="depth" [height]="height" [width]="width"></app-misc-css3d-bars>
+<app-misc-css3d-bars [settings]="settings"></app-misc-css3d-bars>
 <div class="container-fluid">
   <div class="row">
     <div class="col mb-3">
       <span class="btn">Bars count:</span>
-      <app-stepper [(value)]="bars" [settings]="barsSettings"></app-stepper>
+      <app-stepper [(value)]="settings.bars" [settings]="barsSettings"></app-stepper>
     </div>
     <div class="col mb-3">
       <span class="btn">Depth:</span>
-      <app-stepper [(value)]="depth" [settings]="depthSettings"></app-stepper>
+      <app-stepper [(value)]="settings.depth" [settings]="depthSettings"></app-stepper>
     </div>
     <div class="col mb-3">
       <span class="btn">Width:</span>
-      <app-stepper [(value)]="width" [settings]="sizeSettings"></app-stepper>
+      <app-stepper [(value)]="settings.width" [settings]="sizeSettings"></app-stepper>
     </div>
     <div class="col mb-3">
       <span class="btn">Height:</span>
-      <app-stepper [(value)]="height" [settings]="sizeSettings"></app-stepper>
+      <app-stepper [(value)]="settings.height" [settings]="sizeSettings"></app-stepper>
     </div>
-    <div class="col mb-3">
-      <app-checkbox></app-checkbox>
+    <div class="col mb-3 d-flex justify-content-center align-items-center">
+      <app-checkbox [(active)]="settings.mode3d" [title]="modeTitle"></app-checkbox>
     </div>
   </div>
 </div>
-<h5>Component</h5>
+<h5 [id]="componentAnchor">Component</h5>
 <p>Here is the source code.</p>
 <app-source-viewer [sources]="miscCss3dBarsSources"></app-source-viewer>
+<p>
+  In this demo, I've tried to simplify the entire process of rendering of the object.
+</p>
+<p>
+  Static parts reside in the CSS definitions. And the dynamic parts are calculated upon each parameters update.
+</p>
+<p>
+  Because this object has a simple structure, all data required to build it is calculated with the help of three functions.
+</p>
+<p>The two of them <code>faceWidth</code> and <code>faceHeight</code> are calculating the correct width and height of each part.</p>
+<p>
+  The <code>transform</code> function finds which transformations are required to place each part in the proper place and to turn them to
+  the right angle.
+</p>
+<h5 [id]="descriptionAnchor">Description</h5>
+<p>
+  The idea behind the rendering process is simple.
+</p>
+<p>
+  There is an object (I refer to it as <code>plane</code>) that defines the height and width of the object. By default the plane is
+  invisible.
+</p>
+<p>
+  Next, I'm creating other objects (I refer to them as <code>faces</code>). Each face is placed in the correspondent place with the
+  respective angle.
+</p>
+<p>
+  The set of faces (I refer to them as <code>bar</code>) is positioned from top of the plane to the bottom in order of appearance. Thus, by
+  defining the number of bars, it is possible to realign faces to the right places.
+</p>
+<p>
+  In this demo, the only rotating object is the plane. All other parts are just following the plane.
+</p>
+<p>
+  If, for some reason, the browser doesn't support the yet experimental CSS feature
+  <app-external-link [href]="transformStyleUrl">transform-style</app-external-link> there would be no 3D effect. To try it out, you may
+  toggle an appropriate checkbox in the demo.
+</p>
+<h5 [id]="conclusionAnchor">Conclusion</h5>
+<p>
+  With this new feature, it is possible to enrich web pages with simple 3D objects.
+</p>
+<p>
+  I've got a couple of ideas about how it can be applied!
+</p>
+<p>
+  It can be a preloader to your web application.
+</p>
+<p>
+  It is possible to visualize some data.
+</p>
+<p>
+  Also, it is possible to implement some fancy 3D spinners/waiters/loading indicators!
+</p>

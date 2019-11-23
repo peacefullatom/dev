@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import {
+  css3dBars,
+  css3dDepth,
   css3dFaceBack,
   css3dFaceBottom,
   css3dFaceFront,
@@ -8,8 +10,11 @@ import {
   css3dFaceRight,
   css3dFacesCount,
   css3dFaceTop,
+  css3dHue,
+  css3dMode,
+  css3dSize,
 } from './const';
-import { Css3dFace } from './types';
+import { Css3dFace, IMiscCss3dBarsSettings } from './types';
 
 @Component({
   selector: 'app-misc-css3d-bars',
@@ -17,12 +22,31 @@ import { Css3dFace } from './types';
   styleUrls: ['./misc-css3d-bars.component.scss']
 })
 export class MiscCss3dBarsComponent implements OnInit {
-  @Input() width = 500;
-  @Input() height = 300;
-  @Input() depth = 100;
-  @Input() bars = 5;
-  @Input() hue = 0;
-  @Input() flat = false;
+  @Input() settings: IMiscCss3dBarsSettings;
+
+  get width(): number {
+    return this.settings ? this.settings.width : css3dSize;
+  }
+
+  get height(): number {
+    return this.settings ? this.settings.height : css3dSize;
+  }
+
+  get depth(): number {
+    return this.settings ? this.settings.depth : css3dDepth;
+  }
+
+  get bars(): number {
+    return this.settings ? this.settings.bars : css3dBars;
+  }
+
+  get hue(): number {
+    return this.settings ? this.settings.hue : css3dHue;
+  }
+
+  get mode3d(): boolean {
+    return this.settings ? this.settings.mode3d : css3dMode;
+  }
 
   get facesCount(): number {
     return Array.apply(null, { length: css3dFacesCount * this.bars }).map(Number.call, Number);

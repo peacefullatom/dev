@@ -1,25 +1,21 @@
 <div class="container">
   <div
-    class="plane"
     [ngStyle]="{
       width: size(planeWidth),
       height: size(planeHeight),
-      'transform-style': flat ? 'flat' : 'preserve-3d'
+      'transform-style': mode3d ? 'preserve-3d' : 'flat'
     }"
+    class="plane"
   >
     <div
       [ngStyle]="{
         background: background,
-        display: 'flex',
-        'align-items': 'center',
-        'justify-content': 'center',
-        position: 'absolute',
-        overflow: 'hidden',
         width: size(faceWidth(face)),
         height: size(faceHeight(face)),
         transform: transform(face)
       }"
       *ngFor="let face of facesCount"
+      class="face"
     ></div>
   </div>
 </div>
