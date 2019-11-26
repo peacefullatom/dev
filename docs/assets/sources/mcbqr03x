@@ -12,6 +12,7 @@ export interface IMiscCss3dBarsSettings {
   width: number;
   height: number;
   depth: number;
+  perspective: number;
   bars: number;
   hue: number;
   mode3d: boolean;

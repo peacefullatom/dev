@@ -12,6 +12,7 @@ import {
   css3dFaceTop,
   css3dHue,
   css3dMode,
+  css3dPerspective,
   css3dSize,
 } from './const';
 import { Css3dFace, IMiscCss3dBarsSettings } from './types';
@@ -34,6 +35,10 @@ export class MiscCss3dBarsComponent implements OnInit {
 
   get depth(): number {
     return this.settings ? this.settings.depth : css3dDepth;
+  }
+
+  get perspective(): number {
+    return this.settings ? this.settings.perspective : css3dPerspective;
   }
 
   get bars(): number {

@@ -1,4 +1,4 @@
-&lt;div class="container"&gt;
+&lt;div class="container" [ngStyle]="{ perspective: size(perspective) }"&gt;
   &lt;div
     [ngStyle]="{
       width: size(planeWidth),
