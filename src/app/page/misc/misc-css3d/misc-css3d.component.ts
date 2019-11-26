@@ -3,7 +3,7 @@ import { SourceViewer } from 'src/app/core/ui/source-viewer/types';
 import { IStepperComponentSettings } from 'src/app/core/ui/stepper/types';
 
 import { conclusionAnchor } from '../../const';
-import { css3dHue, css3dMode, css3dSize } from './misc-css3d-bars/const';
+import { css3dHue, css3dMode, css3dPerspective, css3dSize } from './misc-css3d-bars/const';
 import { IMiscCss3dBarsSettings } from './misc-css3d-bars/types';
 
 interface IMiscCss3dComponentControl {
@@ -23,12 +23,14 @@ export class MiscCss3dComponent implements OnInit {
     depth: 100,
     height: css3dSize,
     width: css3dSize,
+    perspective: css3dPerspective,
     hue: css3dHue,
     mode3d: css3dMode
   };
 
   readonly barsSettings: IStepperComponentSettings = { max: 10, min: 1, step: 1 };
   readonly depthSettings: IStepperComponentSettings = { max: 250, min: 50, step: 50 };
+  readonly perspectiveSettings: IStepperComponentSettings = { max: 1000, min: 250, step: 250 };
   readonly sizeSettings: IStepperComponentSettings = { max: 500, min: 100, step: 50 };
 
   readonly miscCss3dBarsSources: SourceViewer = [

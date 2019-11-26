@@ -31,6 +31,10 @@
       <span class="btn">Height:</span>
       <app-stepper [(value)]="settings.height" [settings]="sizeSettings"></app-stepper>
     </div>
+    <div class="col mb-3">
+      <span class="btn">Perspective:</span>
+      <app-stepper [(value)]="settings.perspective" [settings]="perspectiveSettings"></app-stepper>
+    </div>
     <div class="col mb-3 d-flex justify-content-center align-items-center">
       <app-checkbox [(active)]="settings.mode3d" [title]="modeTitle"></app-checkbox>
     </div>
