@@ -15,27 +15,27 @@
 <app-misc-css3d-bars [settings]="settings"></app-misc-css3d-bars>
 <div class="container-fluid">
   <div class="row">
-    <div class="col mb-3">
-      <span class="btn">Bars count:</span>
+    <div class="col-sm-2 col-md-3 col-lg-3 mb-3">
+      <span class="btn">Bars count:</span><br />
       <app-stepper [(value)]="settings.bars" [settings]="barsSettings"></app-stepper>
     </div>
-    <div class="col mb-3">
-      <span class="btn">Depth:</span>
+    <div class="col-sm-2 col-md-3 col-lg-3 mb-3">
+      <span class="btn">Depth:</span><br />
       <app-stepper [(value)]="settings.depth" [settings]="depthSettings"></app-stepper>
     </div>
-    <div class="col mb-3">
-      <span class="btn">Width:</span>
+    <div class="col-sm-2 col-md-3 col-lg-3 mb-3">
+      <span class="btn">Width:</span><br />
       <app-stepper [(value)]="settings.width" [settings]="sizeSettings"></app-stepper>
     </div>
-    <div class="col mb-3">
-      <span class="btn">Height:</span>
+    <div class="col-sm-2 col-md-3 col-lg-3 mb-3">
+      <span class="btn">Height:</span><br />
       <app-stepper [(value)]="settings.height" [settings]="sizeSettings"></app-stepper>
     </div>
-    <div class="col mb-3">
-      <span class="btn">Perspective:</span>
+    <div class="col-sm-2 col-md-3 col-lg-3 mb-3">
+      <span class="btn">Perspective:</span><br />
       <app-stepper [(value)]="settings.perspective" [settings]="perspectiveSettings"></app-stepper>
     </div>
-    <div class="col mb-3 d-flex justify-content-center align-items-center">
+    <div class="col-sm-2 col-md-3 col-lg-3 mb-3 d-flex justify-content-center align-items-center">
       <app-checkbox [(active)]="settings.mode3d" [title]="modeTitle"></app-checkbox>
     </div>
   </div>
