@@ -1,0 +1,96 @@
+<h4>CSS Pseudo 3D Preloader</h4>
+<p>
+  Preloaders are the way to improve the user experience significantly.
+</p>
+<p>
+  Instead of nervously staring into the blank page, the user will prefer to leave the page. And if your page has a preloader, it is cool.
+  Chances that the user will stay and wait for your content to load are much higher!
+</p>
+<p>
+  It is worth to mention that the preloader is a wide area for creativity and experiments!
+</p>
+<p>
+  In this article, I will share the idea of how to build a fancy version of the preloader.
+</p>
+<div class="container-fluid">
+  <div class="spinner"></div>
+  <div class="spinner two"></div>
+  <div class="spinner three"></div>
+</div>
+<h5 [id]="ideaAnchor">Idea</h5>
+<p>The idea behind this version of the preloader is to rotate several colorful objects to create an illusion of 3D animation.</p>
+<h5 [id]="layoutAnchor">Layout</h5>
+<app-code>{{ spinnerLayoutCode }}</app-code>
+<p>The layout is pretty simple. All the magic happens in the CSS.</p>
+<h5 [id]="cssAnchor">CSS</h5>
+<h6>Container</h6>
+<p>The container does nothing special. Its only purpose is to take all the space available and to center its content.</p>
+<app-code>{{ spinnerContainerStyleCode }}</app-code>
+<h6>Spinner</h6>
+<p>The spinning object looks like this.</p>
+<div class="container-fluid sample"><div class="spinner sample"></div></div>
+<app-note>In this example, I've highlighted normally hidden parts with a semi-transparent color.</app-note>
+<p>Now let's take it to step by step.</p>
+<p>Initially, the entire border is invisible:</p>
+<app-code>border: 4vmin solid transparent;</app-code>
+<p>This rule turns a square into the circle:</p>
+<app-code>border-radius: 50%;</app-code>
+<p>Next two lines are defining the visible parts:</p>
+<app-code>{{ spinnerBorderHighlightStyleCode }}</app-code>
+<app-note>Here the CSS variables are used to define the color of the visible parts. We'll talk about them later.</app-note>
+<p>Finally, there is a CSS rule telling the browser how to calculate the width and height of the content:</p>
+<app-code>box-sizing: border-box;</app-code>
+<app-note>You can read more about <app-external-link [href]="boxSizingUrl">box-sizing</app-external-link>.</app-note>
+<p>Ok. Now let's deal with the animation.</p>
+<p>In this example, I've used separate animation rules instead of the shorthand version.</p>
+<p>Let's take a look at them. First, the name of the animation:</p>
+<app-code>animation-name: rotate;</app-code>
+<p>After that, let's calculate the duration of the animation like this:</p>
+<app-code>animation-duration: calc(var(--delay) * 3);</app-code>
+<app-note>The explanation of the CSS variables will be a bit later.</app-note>
+<p>Next rule defines how the animation will be applied:</p>
+<app-code>animation-timing-function: ease-in-out;</app-code>
+<app-note
+  >The explanation of the <app-external-link [href]="animationTimingFunctionUrl">animation-timing-function</app-external-link>.</app-note
+>
+<p>The last CSS rule tells the browser to play the animation forever:</p>
+<app-code>animation-iteration-count: infinite;</app-code>
+<p>The keyframes for this animation are very simple.</p>
+<app-code>{{ keyframesCode }}</app-code>
+<p>This animation aims to rotate an object from 0 to 360 degrees around all axes.</p>
+<div class="container-fluid sample"><div class="spinner animated sample"></div></div>
+<p>Let's wrap it up.</p>
+<app-code>{{ spinnerStyleCode }}</app-code>
+<h6>CSS Variables</h6>
+<p>Now it's time to dive a bit deeper into the CSS variables.</p>
+<p>The declaration looks like this:</p>
+<app-code>--size: 20vmin;</app-code>
+<app-note>You can read about the <app-external-link [href]="cssUnitsUrl">CSS measuring units</app-external-link>.</app-note>
+<p>
+  The initial declaration of the variable can be placed anywhere up the CSS elements tree from the point of implementation. Also, it is
+  possible to declare variables in the global scope.
+</p>
+<p>In the latter case it will look like this:</p>
+<app-code>{{ cssGlobalVariableCode }}</app-code>
+<app-note>Keep in mind that the names are case sensitive.</app-note>
+<p>The next useful thing is that the value of the variable can be altered.</p>
+<p>Here is an example:</p>
+<app-code>{{ cssVariableAlteringCode }}</app-code>
+<p>With the above example we can build a layout like this:</p>
+<app-code>{{ cssAlteredVariableLayoutCode }}</app-code>
+<p>One more feature is that variables can be used in the CSS calculation clause:</p>
+<app-code>{{ cssCalculationCode }}</app-code>
+<p>Let's summarize:</p>
+<app-code>{{ cssVariablesExampleCode }}</app-code>
+<p>
+  Thus, the CSS variables are a great alternative to CSS preprocessors (such as SASS or LESS). The only downside is that these features are
+  supported only by the latest versions of browsers. And an example from this article won't work in the Internet Explorer.
+</p>
+<p>
+  So, if your project is aimed to support only the latest versions of the browsers - go ahead and add additional flexibility to the CSS
+  rules you are using!
+</p>
+<h5 [id]="conclusionAnchor">Conclusion</h5>
+<p>There are plenty of ways to improve the user experience and make your clients happy.</p>
+<p>Adding a preloader to your page is only one of the possible ways to impress your visitors.</p>
+<p>Despite the simplicity, the preloader is a wide area for experiments and creativity.</p>

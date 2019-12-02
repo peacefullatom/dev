@@ -1,0 +1,60 @@
+.container-fluid {
+  --size: 30vmin;
+  width: 100%;
+  height: calc(var(--size) * 1.5);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.sample {
+    height: calc(var(--size) * 0.7);
+  }
+
+  .spinner {
+    --border-color: #ff3333ff;
+    --delay: 0.9s;
+    width: var(--size);
+    height: var(--size);
+    animation-name: rotate;
+    animation-duration: calc(var(--delay) * 3);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border: 4vmin solid transparent;
+    border-radius: 50%;
+    border-top-color: var(--border-color);
+    border-bottom-color: var(--border-color);
+    box-sizing: border-box;
+    position: absolute;
+
+    &.two {
+      --border-color: #ffff33ff;
+      animation-delay: var(--delay);
+    }
+    &.three {
+      --border-color: #33ff33ff;
+      animation-delay: calc(var(--delay) * 2);
+    }
+    &.sample {
+      --size: 15vmin;
+      --border-color: #3333ffff;
+      border: 2vmin solid #3333ff44;
+      border-top-color: var(--border-color);
+      border-bottom-color: var(--border-color);
+      animation-name: none;
+
+      &.animated {
+        animation-name: rotate;
+      }
+    }
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
