@@ -23,8 +23,60 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="styles.621f70aa80da75e1bfb5.css"></head>
+  <link rel="stylesheet" href="styles.a5d5dd859a3bf916ebf3.css"></head>
   <body class="d-flex flex-column h-100">
-    <app-root></app-root>
-  <script src="runtime-es2015.c4692519f99ae45faefb.js" type="module"></script><script src="runtime-es5.c4692519f99ae45faefb.js" nomodule defer></script><script src="polyfills-es5.aa8fb53c1da018a4a267.js" nomodule defer></script><script src="polyfills-es2015.8ba8480ec70762153215.js" type="module"></script><script src="main-es2015.afea4847254425b2b5cb.js" type="module"></script><script src="main-es5.afea4847254425b2b5cb.js" nomodule defer></script></body>
+    <app-root>
+      <style>
+        html,
+        body,
+        .container {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .spinner {
+          --size: 30vmin;
+          --border-color: #ff3333ff;
+          --delay: 0.9s;
+          width: var(--size);
+          height: var(--size);
+          animation-name: rotate;
+          animation-duration: calc(var(--delay) * 3);
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          border: 4vmin solid transparent;
+          border-radius: 50%;
+          border-top-color: var(--border-color);
+          border-bottom-color: var(--border-color);
+          box-sizing: border-box;
+          position: absolute;
+        }
+        .spinner.two {
+          --border-color: #ffff33ff;
+          animation-delay: var(--delay);
+        }
+        .spinner.three {
+          --border-color: #33ff33ff;
+          animation-delay: calc(var(--delay) * 2);
+        }
+        @keyframes rotate {
+          from {
+            transform: rotate3d(0, 0, 0, 0deg);
+          }
+          to {
+            transform: rotate3d(1, 1, 1, 360deg);
+          }
+        }
+      </style>
+      <div class="container">
+        <div class="spinner"></div>
+        <div class="spinner two"></div>
+        <div class="spinner three"></div>
+      </div>
+    </app-root>
+  <script src="runtime-es2015.28c6ec8937d336344bff.js" type="module"></script><script src="runtime-es5.28c6ec8937d336344bff.js" nomodule defer></script><script src="polyfills-es5.aa8fb53c1da018a4a267.js" nomodule defer></script><script src="polyfills-es2015.8ba8480ec70762153215.js" type="module"></script><script src="main-es2015.5346eef554f6e591cf67.js" type="module"></script><script src="main-es5.5346eef554f6e591cf67.js" nomodule defer></script></body>
 </html>
