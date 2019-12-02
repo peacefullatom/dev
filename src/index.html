@@ -25,6 +25,58 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body class="d-flex flex-column h-100">
-    <app-root></app-root>
+    <app-root>
+      <style>
+        html,
+        body,
+        .container {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .spinner {
+          --size: 30vmin;
+          --border-color: #ff3333ff;
+          --delay: 0.9s;
+          width: var(--size);
+          height: var(--size);
+          animation-name: rotate;
+          animation-duration: calc(var(--delay) * 3);
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          border: 4vmin solid transparent;
+          border-radius: 50%;
+          border-top-color: var(--border-color);
+          border-bottom-color: var(--border-color);
+          box-sizing: border-box;
+          position: absolute;
+        }
+        .spinner.two {
+          --border-color: #ffff33ff;
+          animation-delay: var(--delay);
+        }
+        .spinner.three {
+          --border-color: #33ff33ff;
+          animation-delay: calc(var(--delay) * 2);
+        }
+        @keyframes rotate {
+          from {
+            transform: rotate3d(0, 0, 0, 0deg);
+          }
+          to {
+            transform: rotate3d(1, 1, 1, 360deg);
+          }
+        }
+      </style>
+      <div class="container">
+        <div class="spinner"></div>
+        <div class="spinner two"></div>
+        <div class="spinner three"></div>
+      </div>
+    </app-root>
   </body>
 </html>
